@@ -10,6 +10,10 @@ public class Tower : MonoBehaviour
     public float range = 15f;
     //creates the tag for enemies
     public string enemyTag = "Enemy";
+    //attack speed
+    public float attackSpeed = 1f;
+    //fixed attack update
+    private float attackCountdown = 0f;
 
     void Start()
     {
@@ -50,6 +54,19 @@ public class Tower : MonoBehaviour
     {
         if (target == null)
         return;
+
+        if(attackCountdown <= 0f)
+        {
+            Attack();
+            attackCountdown = 1f/attackSpeed;
+        }
+        //counter for the attack countdown
+        attackCountdown -= Time.deltaTime;
+    }
+
+    void Attack()
+    {
+        Debug.Log("SHOOT");
     }
 
     void OnDrawGizmosSelected()
