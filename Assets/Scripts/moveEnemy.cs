@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class moveEnemy : MonoBehaviour
+{
+    // The speed of the enemy
+    public float speed=10f;
+    // The target waypoint
+    private Transform target;
+    // The index of the waypoint that the enemy is currently targeting
+    private int wavepointIndex=0;
+
+    void Awake(){
+        Debug.Log("moveEnemy.Awake()");
+    }
+
+    void Start(){
+        Debug.Log("moveEnemy.start()");
+        // Set the target to the first waypoint
+        target=Waypoints.points[0];
+    }
+
+    void Update()
+    {
+        Debug.Log("moveEnemy.update()");
+        // Move the enemy towards the waypoint
+        Vector3 dir = target.position - transform.position;
+        // Move the enemy towards the waypoint
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        // If the enemy reaches the waypoint, get the next waypoint
+        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        {
+            GetNextWaypoint();
+        }
+    }
+    
+
+    // Get the next waypoint
+    void GetNextWaypoint(){
+        // If the enemy reaches the last waypoint, destroy it
+        if(wavepointIndex>=Waypoints.points.Length-1){
+            Destroy(gameObject);
+            return;
+        }
+        // Get the next waypoint
+        wavepointIndex++;
+        target=Waypoints.points[wavepointIndex];
+    }
+}
+
+
+
