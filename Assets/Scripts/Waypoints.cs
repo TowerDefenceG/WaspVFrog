@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoints : MonoBehaviour
@@ -11,8 +9,8 @@ public class Waypoints : MonoBehaviour
         // Get all the points in the path
         points=new Transform[transform.childCount];
         // Store all the points in the array
-        for(int i=0;i<points.Length;i++){
-            points[i]=transform.GetChild(i);
+        for(int i=0; i < points.Length; i++){
+            points[i] = transform.GetChild(i);
         }
     }
 }

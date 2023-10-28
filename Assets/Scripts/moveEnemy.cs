@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class moveEnemy : MonoBehaviour
 {
@@ -28,6 +27,7 @@ public class moveEnemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         // Move the enemy towards the waypoint
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
         // If the enemy reaches the waypoint, get the next waypoint
         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
@@ -39,13 +39,18 @@ public class moveEnemy : MonoBehaviour
     // Get the next waypoint
     void GetNextWaypoint(){
         // If the enemy reaches the last waypoint, destroy it
-        if(wavepointIndex>=Waypoints.points.Length-1){
-            Destroy(gameObject);
-            return;
+        if(wavepointIndex >= Waypoints.points.Length-1){
+           EndPath();
+           // Destroy(gameObject);
+           return;
         }
         // Get the next waypoint
         wavepointIndex++;
         target=Waypoints.points[wavepointIndex];
+    }
+
+    void EndPath(){
+        Destroy(gameObject);
     }
 }
 

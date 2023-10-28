@@ -1,17 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
+
     public Transform spawnPoint;
+
     public float timeBetweenWaves = 5f; //cooldown
     private float countdown =2f; //takes 2 seconds to spawn first wave
+
     public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveNumberText;
+
     private int waveIndex = 0; 
 
     private void Update() {
@@ -29,14 +32,16 @@ public class WaveSpawner : MonoBehaviour
 
     //coroutine 
     IEnumerator SpawnWave() {
-        waveIndex ++; // next wave
+        
         waveNumberText.text = ("Wave: " + waveIndex.ToString());
 
         Debug.Log("Wave Incoming:" + waveIndex);
         for (int i=0; i< waveIndex; i++){
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f); //time between enemies in a wave
+
         }
+        waveIndex ++; // next wave
 
     }
 
