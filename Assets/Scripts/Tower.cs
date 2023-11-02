@@ -6,14 +6,22 @@ public class Tower : MonoBehaviour
 {
     //the waypoint of the target
     public Transform target;
+
+    [Header("Attributes")]
     //range of the tower
     public float range = 15f;
-    //creates the tag for enemies
-    public string enemyTag = "Enemy";
-    //attack speed
+        //attack speed
     public float attackSpeed = 1f;
     //fixed attack update
     private float attackCountdown = 0f;
+
+    [Header("Setup")]
+    //creates the tag for enemies
+    public string enemyTag = "Enemy";
+
+    public GameObject attackPrefab;
+    public Transform attackPoint;
+
 
     void Start()
     {
@@ -58,7 +66,7 @@ public class Tower : MonoBehaviour
         if(attackCountdown <= 0f)
         {
             Attack();
-            attackCountdown = 1f/attackSpeed;
+            attackCountdown = 1f / attackSpeed;
         }
         //counter for the attack countdown
         attackCountdown -= Time.deltaTime;
@@ -66,7 +74,11 @@ public class Tower : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("SHOOT");
+        GameObject attackGO = (GameObject)Instantiate (attackPrefab, attackPoint.position, attackPoint.rotation);
+    Attack attack = attackGO.GetComponent<Attack>();
+
+    if (attack != null)
+        attack.Seek(target);
     }
 
     void OnDrawGizmosSelected()
