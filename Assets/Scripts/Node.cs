@@ -6,7 +6,8 @@ public class Node : MonoBehaviour{
     public Color hoverColor;
     public Vector3 positionOffset;
 
-    private GameObject turret; //current turret on tile (null if empty)
+    [Header("Optional")] //optional parameter in unity
+    public GameObject turret; //current turret on tile (null if empty)
 
     private Renderer rend;
     private Color startColor;
@@ -20,12 +21,16 @@ public class Node : MonoBehaviour{
         buildManager = BuildManager.instance;
     }
 
+    public Vector3 GetBuildPosition(){
+        return transform.position + positionOffset; // position to build turret
+    }
+
     private void OnMouseDown() { //click on tile
         if (EventSystem.current.IsPointerOverGameObject()){
             return;
         }
 
-        if (buildManager.GetTurretToBuild() == null){
+        if (!buildManager.CanBuild){
             return;
         }
 
@@ -35,9 +40,7 @@ public class Node : MonoBehaviour{
         }
         // Debug.Log("Build turret");
 
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild(); //gets turret type 
-        turret = (GameObject)Instantiate(turretToBuild, transform.position +positionOffset, transform.rotation); //cast to GameObject, assign to turret
-
+        buildManager.BuildTurretOn (this);
     }
 
     void OnMouseEnter (){
@@ -46,7 +49,7 @@ public class Node : MonoBehaviour{
             return;
         }
 
-        if (buildManager.GetTurretToBuild() == null){ //only highlight tiles if we have a turret to build
+        if (!buildManager.CanBuild){ //only highlight tiles if we have a turret to build
             return;
         }
 
