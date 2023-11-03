@@ -9,7 +9,8 @@ public class PlayerStats : MonoBehaviour
     public static int Money; //accessible only using playerstats type
     public int startMoney = 400; //accessible in unity editor
     public static int Lives;
-    public int startLives = 20;
+    public int startLives = 5;
+    public static int Rounds;
 
     public TextMeshProUGUI moneyText;
        
@@ -17,6 +18,8 @@ public class PlayerStats : MonoBehaviour
     void Start(){
         Money = startMoney;
         Lives = startLives;
+
+        Rounds = 0;
 
     }
 

@@ -42,6 +42,7 @@ public class WaveSpawner : MonoBehaviour
 
         }
         waveIndex ++; // next wave
+        PlayerStats.Rounds++;
 
     }
 

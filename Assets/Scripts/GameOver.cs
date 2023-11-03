@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI roundsText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnEnable() {
+        roundsText.text = PlayerStats.Rounds.ToString();
     }
+    // public void Retry(){
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    // }
+    // public void Menu(){
+    //     Debug.Log("Go to menu.");
+    // }
 }
