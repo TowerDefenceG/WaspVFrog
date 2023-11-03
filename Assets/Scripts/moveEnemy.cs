@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class moveEnemy : MonoBehaviour
 {
     // The speed of the enemy
@@ -11,18 +12,18 @@ public class moveEnemy : MonoBehaviour
     private int wavepointIndex=0;
 
     void Awake(){
-        Debug.Log("moveEnemy.Awake()");
+        //Debug.Log("moveEnemy.Awake()");
     }
 
     void Start(){
-        Debug.Log("moveEnemy.start()");
+        //Debug.Log("moveEnemy.start()");
         // Set the target to the first waypoint
         target=Waypoints.points[0];
     }
 
     void Update()
     {
-        Debug.Log("moveEnemy.update()");
+        //Debug.Log("moveEnemy.update()");
         // Move the enemy towards the waypoint
         Vector3 dir = target.position - transform.position;
         // Move the enemy towards the waypoint
@@ -49,7 +50,12 @@ public class moveEnemy : MonoBehaviour
         target=Waypoints.points[wavepointIndex];
     }
 
-    void EndPath(){
+    void EndPath()
+    {
+        PlayerStats.decreaseLives();
+        //log lives
+        Debug.Log("Lives: " + PlayerStats.Lives);
+
         Destroy(gameObject);
     }
 }
