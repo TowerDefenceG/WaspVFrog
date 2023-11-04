@@ -10,6 +10,8 @@ public class moveEnemy : MonoBehaviour
     private Transform target;
     // The index of the waypoint that the enemy is currently targeting
     private int wavepointIndex=0;
+    // The health of the enemy
+    public int health = 100;
 
     void Awake(){
         //Debug.Log("moveEnemy.Awake()");
@@ -36,6 +38,16 @@ public class moveEnemy : MonoBehaviour
         }
     }
     
+    public void TakeDamage(int amount){
+        health -= amount;
+        if(health <= 0){
+            Die();
+        }
+    }
+    
+    void Die(){
+        Destroy(gameObject);
+    }
 
     // Get the next waypoint
     void GetNextWaypoint(){

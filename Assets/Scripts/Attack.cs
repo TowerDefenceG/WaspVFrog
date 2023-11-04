@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
 private Transform target;
 
 public float speed = 70f;
+public int damage = 50;
     public void Seek(Transform _target)
     {
         target = _target;
@@ -38,8 +39,8 @@ public float speed = 70f;
     {
         Debug.Log("HitTarget");
         Destroy(gameObject);
-        Destroy(target.gameObject);
-        target = null;
+        moveEnemy e = target.GetComponent<moveEnemy>();
+        e?.TakeDamage(damage);  
     }
 }   
 
