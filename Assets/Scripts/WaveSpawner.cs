@@ -37,6 +37,7 @@ public class WaveSpawner : MonoBehaviour
 
         Debug.Log("Wave Incoming:" + waveIndex);
         for (int i=0; i< waveIndex; i++){
+			Debug.Log("Spawning Enemy");
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f); //time between enemies in a wave
 
@@ -46,7 +47,10 @@ public class WaveSpawner : MonoBehaviour
 
     }
 
+	//spawn enemy at spawnpoint
     void SpawnEnemy(){
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+		Debug.Log("Spawned Enemy");
+		Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+		
     }
 }
