@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2720548761127429333}
   - component: {fileID: 7227936679001912420}
   m_Layer: 5
-  m_Name: ShopTurretItem
+  m_Name: ShopTurretItem 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Upgraded Frog (250)
+  m_text: 'Standard Frog (100)
 
 '
   m_isRightToLeft: 0
@@ -236,8 +236,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
