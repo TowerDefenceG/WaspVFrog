@@ -12,6 +12,7 @@ public class moveEnemy : MonoBehaviour
     private int wavepointIndex=0;
     // The health of the enemy
     public int health = 100;
+    public int value = 50;
 
     void Awake(){
         //Debug.Log("moveEnemy.Awake()");
@@ -42,10 +43,12 @@ public class moveEnemy : MonoBehaviour
         health -= amount;
         if(health <= 0){
             Die();
+            
         }
     }
     
     void Die(){
+        PlayerStats.Money += value;
         Destroy(gameObject);
     }
 
