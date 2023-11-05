@@ -15,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
     public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveNumberText;
 
-    private int waveIndex = 0; 
+    private int waveIndex = 1; 
 
     private void Update() {
         if (!GameManager.gameIsOver){
@@ -37,9 +37,9 @@ public class WaveSpawner : MonoBehaviour
         
         waveNumberText.text = ("Wave: " + waveIndex.ToString());
 
-        Debug.Log("Wave Incoming:" + waveIndex);
+        // Debug.Log("(wave) Wave Incoming:" + waveIndex);
         for (int i=0; i< waveIndex; i++){
-			Debug.Log("Spawning Enemy");
+			// Debug.Log("(wave) Spawning Enemy");
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f); //time between enemies in a wave
 
@@ -51,7 +51,7 @@ public class WaveSpawner : MonoBehaviour
 
 	//spawn enemy at spawnpoint
     void SpawnEnemy(){
-		Debug.Log("Spawned Enemy");
+		// Debug.Log("(wave) Spawned Enemy");
 		Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
 		
     }
