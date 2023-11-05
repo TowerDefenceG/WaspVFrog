@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     void Update(){
-         moneyText.text = ("�" + Money.ToString() ); //change to whatever currency we want, maybe an icon
+         moneyText.text = ("£" + Money.ToString() ); //change to whatever currency we want, maybe an icon
     }
     
     public static void decreaseLives()
