@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0040435893, g: 0.028945927, b: 0.006156915, a: 1}
+  m_IndirectSpecularColor: {r: 0.004035936, g: 0.028884932, b: 0.0061454526, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10564,6 +10564,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1920083097}
   - {fileID: 1093539285}
   - {fileID: 1739960908}
   - {fileID: 785683229}
@@ -12261,7 +12262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790645827981284730, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70
+      value: -131.3
       objectReference: {fileID: 0}
     - target: {fileID: 3790645827981284730, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12299,6 +12300,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1e92c32674646b74eabb722724649e37, type: 2}
+    - target: {fileID: 6053855507621178100, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053855507621178100, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
+      propertyPath: attackSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6713292447680504064, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_Name
       value: Tower 2
@@ -15598,7 +15607,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1920083096
 Canvas:
   m_ObjectHideFlags: 0
@@ -15629,16 +15638,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920083093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3452915, y: 1.3452915, z: 1.3452915}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1244671602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
+  m_AnchoredPosition: {x: 1291.4799, y: 726.4574}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1920915480
@@ -15790,7 +15799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 400
-  startLives: 20
+  startLives: 5
   moneyText: {fileID: 1739960909}
 --- !u!114 &1937667733
 MonoBehaviour:
@@ -17290,7 +17299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790645827981284730, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70
+      value: -131
       objectReference: {fileID: 0}
     - target: {fileID: 3790645827981284730, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17324,6 +17333,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053855507621178100, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053855507621178100, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
+      propertyPath: attackSpeed
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6713292447680504064, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_Name
       value: Tower
@@ -17349,6 +17366,58 @@ PrefabInstance:
     - target: {fileID: 1741079514588451953, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
       propertyPath: m_Name
       value: ShopTurretItem 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.23284082
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.9655588
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.10124595
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.59815615
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1710444333}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandardTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720548761127429333, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7393168419570963452, guid: e45345ab86a3f43b8931c4b6ce36a154, type: 3}
       propertyPath: m_Pivot.x
@@ -17584,4 +17653,3 @@ SceneRoots:
   - {fileID: 1244671602}
   - {fileID: 1431207538}
   - {fileID: 1937667729}
-  - {fileID: 1920083097}
