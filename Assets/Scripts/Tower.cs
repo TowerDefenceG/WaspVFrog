@@ -63,6 +63,9 @@ public class Tower : MonoBehaviour
         if (target == null)
         return;
 
+        
+        transform.LookAt(target);
+
         if(attackCountdown <= 0f)
         {
             Attack();
@@ -70,6 +73,8 @@ public class Tower : MonoBehaviour
         }
         //counter for the attack countdown
         attackCountdown -= Time.deltaTime;
+
+
     }
 
     void Attack()

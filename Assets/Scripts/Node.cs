@@ -4,19 +4,20 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour{
 
     public Color hoverColor;
+    public Color startColor;
     public Vector3 positionOffset;
 
     [Header("Optional")] //optional parameter in unity
     public GameObject turret; //current turret on tile (null if empty)
 
     private Renderer rend;
-    private Color startColor;
+    //private Color startColor;
 
     BuildManager buildManager;
 
     private void Start() {
         rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
+        rend.material.color = startColor;
 
         buildManager = BuildManager.instance;
     }
