@@ -18,16 +18,18 @@ public class WaveSpawner : MonoBehaviour
     private int waveIndex = 0; 
 
     private void Update() {
-        //manage time
-        if (countdown <= 0f) //countdown reaches 0
-        {
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves; //reset countdown on wave spawn
-        }
+        if (!GameManager.gameIsOver){
+            //manage time
+            if (countdown <= 0f) //countdown reaches 0
+            {
+                StartCoroutine(SpawnWave());
+                countdown = timeBetweenWaves; //reset countdown on wave spawn
+            }
 
-        countdown -= Time.deltaTime; // decrase countdown constantly
+            countdown -= Time.deltaTime; // decrase countdown constantly
         
-        waveCountdownText.text = Mathf.Round(countdown).ToString();
+            waveCountdownText.text = Mathf.Round(countdown).ToString();
+        }
     }
 
     //coroutine 

@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI roundsText;
 
     void OnEnable() {
-        roundsText.text = PlayerStats.Rounds.ToString();
+        roundsText.text = (PlayerStats.Rounds-1).ToString();
     }
     // public void Retry(){
     //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

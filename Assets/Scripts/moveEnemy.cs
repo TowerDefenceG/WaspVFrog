@@ -26,16 +26,18 @@ public class moveEnemy : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("moveEnemy.update()");
-        // Move the enemy towards the waypoint
-        Vector3 dir = target.position - transform.position;
-        // Move the enemy towards the waypoint
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        if (!GameManager.gameIsOver){
+            //Debug.Log("moveEnemy.update()");
+            // Move the enemy towards the waypoint
+            Vector3 dir = target.position - transform.position;
+            // Move the enemy towards the waypoint
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        // If the enemy reaches the waypoint, get the next waypoint
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
-        {
-            GetNextWaypoint();
+            // If the enemy reaches the waypoint, get the next waypoint
+            if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+            {
+                GetNextWaypoint();
+            }
         }
     }
     
