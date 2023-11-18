@@ -1,3 +1,4 @@
+// tutorial from Brackeys: https://youtu.be/uv1zp7aOoOs?si=rYyHKg3-To6t7pFv
 using UnityEngine;
 
 public class Shop : MonoBehaviour
