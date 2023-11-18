@@ -50,7 +50,6 @@ public class moveEnemy : MonoBehaviour
         health -= amount;
         if(health <= 0){
             Die();
-            
         }
     }
     

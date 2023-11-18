@@ -1356,8 +1356,8 @@ MonoBehaviour:
   range: 15
   attackSpeed: 1
   enemyTag: Enemy
-  attackPrefab: {fileID: 0}
-  attackPoint: {fileID: 0}
+  attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
+  attackPoint: {fileID: 3564106367630568424}
 --- !u!1 &9037880925855218692
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,11 @@ public class Attack : MonoBehaviour
 private Transform target;
 
 public float speed = 70f;
+
 public int damage = 50;
+
+public float explosionRadius = 0f;
+
     public void Seek(Transform _target)
     {
         target = _target;
@@ -34,13 +38,51 @@ public int damage = 50;
         }
         //move the bullet towards the enemy
         transform.Translate (dir.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target);
     }
+    
     void HitTarget()
     {
-        Debug.Log("HitTarget");
-        Destroy(gameObject);
         moveEnemy e = target.GetComponent<moveEnemy>();
-        e?.TakeDamage(damage);  
+        // e?.TakeDamage(damage);  
+        // Debug.Log("HitTarget");
+
+        if (explosionRadius > 0f){
+			Explode();
+		} else{
+			Damage(target);
+		}
+
+		Destroy(gameObject);
+        
     }
+
+	void Explode ()
+	{
+		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+		foreach (Collider collider in colliders){
+            Debug.Log(collider.tag);
+
+			if (collider.tag == "Enemy")
+			{
+				Damage(collider.transform);
+			}
+		}
+	}
+
+    void Damage(Transform enemy){
+        moveEnemy e = enemy.GetComponent<moveEnemy>();
+        
+        if (e != null){
+            e.TakeDamage(damage); 
+        }
+    }
+    
+
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+
 }   
 
