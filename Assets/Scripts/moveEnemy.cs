@@ -33,6 +33,11 @@ public class moveEnemy : MonoBehaviour
             // Move the enemy towards the waypoint
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
+            // look in direction it is moving
+            Vector3 relativePos = target.position - transform.position;
+            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+            transform.rotation = rotation;
+
             // If the enemy reaches the waypoint, get the next waypoint
             if (Vector3.Distance(transform.position, target.position) <= 0.4f)
             {

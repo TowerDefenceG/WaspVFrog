@@ -4781,7 +4781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1741079514588451953, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_Name
-      value: AnotherTurretItem
+      value: MissileLauncherItem
       objectReference: {fileID: 0}
     - target: {fileID: 2720548761127429333, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -4825,7 +4825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2720548761127429333, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectAnotherTurret
+      value: SelectMissileTurret
       objectReference: {fileID: 0}
     - target: {fileID: 2720548761127429333, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4846,6 +4846,12 @@ PrefabInstance:
     - target: {fileID: 4147538352527283926, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
+      propertyPath: m_text
+      value: 'Missile Frog (250)
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize
@@ -13759,8 +13765,8 @@ MonoBehaviour:
   standardTurret:
     prefab: {fileID: 1453083651}
     cost: 100
-  anotherTurret:
-    prefab: {fileID: 1943371506}
+  missileTurret:
+    prefab: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
     cost: 250
 --- !u!114 &1710444334
 MonoBehaviour:
@@ -15830,7 +15836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardTurretPrefab: {fileID: 6713292447680504064, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
-  anotherTurretPrefab: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
+  missileTurretPrefab: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
 --- !u!114 &1937667732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15982,11 +15988,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7788231757593892474, guid: 35f69a0995fa4436f801abba012c6845, type: 3}
   m_PrefabInstance: {fileID: 1942851051}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1943371506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
-  m_PrefabInstance: {fileID: 349017501}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1959118957
 PrefabInstance:

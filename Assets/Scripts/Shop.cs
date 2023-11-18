@@ -4,7 +4,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public TurretBlueprint standardTurret; 
-    public TurretBlueprint anotherTurret; 
+    public TurretBlueprint missileTurret; 
 
     BuildManager buildManager;
 
@@ -20,12 +20,12 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(standardTurret);
     }
 
-    public void SelectAnotherTurret(){
+    public void SelectMissileTurret(){
         // called from UI element
         // communicates with buildManager and currency amount
 
-        Debug.Log("Another Turret selected");
-                buildManager.SelectTurretToBuild(anotherTurret);
+        Debug.Log("missile Turret selected");
+                buildManager.SelectTurretToBuild(missileTurret);
 
     }
 }
