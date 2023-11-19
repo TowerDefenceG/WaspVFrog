@@ -44,8 +44,6 @@ public float explosionRadius = 0f;
     void HitTarget()
     {
         moveEnemy e = target.GetComponent<moveEnemy>();
-        // e?.TakeDamage(damage);  
-        // Debug.Log("HitTarget");
 
         if (explosionRadius > 0f){
 			Explode();
@@ -61,10 +59,8 @@ public float explosionRadius = 0f;
 	{
 		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 		foreach (Collider collider in colliders){
-            Debug.Log(collider.tag);
 
-			if (collider.tag == "Enemy")
-			{
+			if (collider.tag == "Enemy"){
 				Damage(collider.transform);
 			}
 		}
@@ -72,7 +68,6 @@ public float explosionRadius = 0f;
 
     void Damage(Transform enemy){
         moveEnemy e = enemy.GetComponent<moveEnemy>();
-        
         if (e != null){
             e.TakeDamage(damage); 
         }

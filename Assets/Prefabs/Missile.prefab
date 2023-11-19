@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b214e0318cbeb419a6b203f3443c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  explosionRadius: 15
-  damage: 102
+  speed: 30.5
+  damage: 50
+  explosionRadius: 7
 --- !u!1 &4098068739147970660
 GameObject:
   m_ObjectHideFlags: 0

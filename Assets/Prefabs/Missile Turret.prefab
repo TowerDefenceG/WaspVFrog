@@ -1353,8 +1353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 15
-  attackSpeed: 1
+  range: 20
+  attackSpeed: 0.5
   enemyTag: Enemy
   attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
   attackPoint: {fileID: 3564106367630568424}
