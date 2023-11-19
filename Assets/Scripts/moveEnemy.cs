@@ -11,8 +11,8 @@ public class moveEnemy : MonoBehaviour
     // The index of the waypoint that the enemy is currently targeting
     private int wavepointIndex=0;
     // The health of the enemy
-    public int health = 100;
-    public int value = 50;
+    public float health = 100;
+    public int worth = 50;
 
     void Awake(){
         //Debug.Log("moveEnemy.Awake()");
@@ -27,7 +27,6 @@ public class moveEnemy : MonoBehaviour
     void Update()
     {
         if (!GameManager.gameIsOver){
-            //Debug.Log("moveEnemy.update()");
             // Move the enemy towards the waypoint
             Vector3 dir = target.position - transform.position;
             // Move the enemy towards the waypoint
@@ -46,7 +45,7 @@ public class moveEnemy : MonoBehaviour
         }
     }
     
-    public void TakeDamage(int amount){
+    public void TakeDamage(float amount){
         health -= amount;
         if(health <= 0){
             Die();
@@ -54,7 +53,7 @@ public class moveEnemy : MonoBehaviour
     }
     
     void Die(){
-        PlayerStats.Money += value;
+        PlayerStats.Money += worth;
         Destroy(gameObject);
     }
 

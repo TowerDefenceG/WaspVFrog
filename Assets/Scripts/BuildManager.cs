@@ -16,9 +16,6 @@ public class BuildManager : MonoBehaviour
 
     }
 
-    public GameObject standardTurretPrefab; 
-    public GameObject missileTurretPrefab;
-
     private TurretBlueprint turretToBuild; 
 
     public bool CanBuild { get { return turretToBuild != null; } } //a property (like a small function) checks condition each time its used

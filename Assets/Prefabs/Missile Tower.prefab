@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 8253456778391251039}
   - component: {fileID: 3921304804051824331}
   m_Layer: 0
-  m_Name: Missile Turret
+  m_Name: Missile Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,6 +26,7 @@ public float explosionRadius = 0f;
             Destroy(gameObject);
             return;
         }
+        
         //transform is the bullet and target is the enemy
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;

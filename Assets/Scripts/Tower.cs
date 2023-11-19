@@ -6,20 +6,29 @@ public class Tower : MonoBehaviour
 {
     //the waypoint of the target
     public Transform target;
+    public moveEnemy targetEnemy;
 
-    [Header("Attributes")]
+    [Header("General")]
     //range of the tower
     public float range = 15f;
-        //attack speed
+
+    [Header("Use Bullets (default)")]
+        
+    public GameObject attackPrefab;
+    //attack speed
     public float attackSpeed = 1f;
     //fixed attack update
     private float attackCountdown = 0f;
+
+    [Header("Use Laser")]
+    public bool useLaser = false;
+    public int damageOverTime = 30; //dps
+    public LineRenderer lineRenderer; 
 
     [Header("Setup")]
     //creates the tag for enemies
     public string enemyTag = "Enemy";
 
-    public GameObject attackPrefab;
     public Transform attackPoint;
 
 
@@ -52,6 +61,7 @@ public class Tower : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<moveEnemy>();
         } else
         {
             target = null;
@@ -60,21 +70,41 @@ public class Tower : MonoBehaviour
     
     void Update()
     {
-        if (target == null)
-        return;
+        if (target == null){
+            if(useLaser){
+                if(lineRenderer.enabled){
+                    lineRenderer.enabled = false;
+                }
+            }
+            return;
 
-        
+        }
+
         transform.LookAt(target);
 
-        if(attackCountdown <= 0f)
-        {
-            Attack();
-            attackCountdown = 1f / attackSpeed;
+        if (useLaser){
+            Laser();
+        }else{ // not laser
+            if(attackCountdown <= 0f)
+            {
+                Attack();
+                attackCountdown = 1f / attackSpeed;
+            }
+            //counter for the attack countdown
+            attackCountdown -= Time.deltaTime;
         }
-        //counter for the attack countdown
-        attackCountdown -= Time.deltaTime;
 
+        
+    }
 
+    void Laser(){
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+
+        if(!lineRenderer.enabled){
+            lineRenderer.enabled = true;
+        }
+        lineRenderer.SetPosition(0, attackPoint.position);
+        lineRenderer.SetPosition(1, target.position);
     }
 
     void Attack()
