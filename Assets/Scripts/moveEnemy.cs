@@ -1,36 +1,25 @@
 using UnityEngine;
 using System.Collections;
-
-
-public class moveEnemy : MonoBehaviour
-{
-    // The speed of the enemy
-    public float speed=10f;
-    // The target waypoint
-    private Transform target;
-    // The index of the waypoint that the enemy is currently targeting
-    private int wavepointIndex=0;
-    // The health of the enemy
-    public float health = 100;
-    public int worth = 50;
-
-    void Awake(){
-        //Debug.Log("moveEnemy.Awake()");
-    }
+[RequireComponent(typeof(Enemy))]
+public class moveEnemy : MonoBehaviour{
+    
+    private Transform target; // The target waypoint
+    private int wavepointIndex = 0; // The index of the waypoint that the enemy is currently targeting
+    
+    private Enemy enemy;
 
     void Start(){
-        //Debug.Log("moveEnemy.start()");
+        enemy = GetComponent<Enemy>();
         // Set the target to the first waypoint
-        target=Waypoints.points[0];
+        target = Waypoints.points[0];
     }
 
-    void Update()
-    {
+    void Update(){
         if (!GameManager.gameIsOver){
             // Move the enemy towards the waypoint
             Vector3 dir = target.position - transform.position;
             // Move the enemy towards the waypoint
-            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+            transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 
             // look in direction it is moving
             Vector3 relativePos = target.position - transform.position;
@@ -43,18 +32,8 @@ public class moveEnemy : MonoBehaviour
                 GetNextWaypoint();
             }
         }
-    }
-    
-    public void TakeDamage(float amount){
-        health -= amount;
-        if(health <= 0){
-            Die();
-        }
-    }
-    
-    void Die(){
-        PlayerStats.Money += worth;
-        Destroy(gameObject);
+
+        enemy.speed = enemy.startSpeed;
     }
 
     // Get the next waypoint
@@ -78,7 +57,5 @@ public class moveEnemy : MonoBehaviour
 
         Destroy(gameObject);
     }
+
 }
-
-
-

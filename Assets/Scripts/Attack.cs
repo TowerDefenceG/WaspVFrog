@@ -44,7 +44,7 @@ public float explosionRadius = 0f;
     
     void HitTarget()
     {
-        moveEnemy e = target.GetComponent<moveEnemy>();
+        Enemy e = target.GetComponent<Enemy>();
 
         if (explosionRadius > 0f){
 			Explode();
@@ -68,7 +68,7 @@ public float explosionRadius = 0f;
 	}
 
     void Damage(Transform enemy){
-        moveEnemy e = enemy.GetComponent<moveEnemy>();
+        Enemy e = enemy.GetComponent<Enemy>();
         if (e != null){
             e.TakeDamage(damage); 
         }

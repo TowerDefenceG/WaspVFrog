@@ -6,29 +6,29 @@ public class Tower : MonoBehaviour
 {
     //the waypoint of the target
     public Transform target;
-    public moveEnemy targetEnemy;
+    public Enemy targetEnemy;
 
     [Header("General")]
     //range of the tower
     public float range = 15f;
 
     [Header("Use Bullets (default)")]
-        
     public GameObject attackPrefab;
     //attack speed
     public float attackSpeed = 1f;
     //fixed attack update
     private float attackCountdown = 0f;
 
+    // Laser properties
     [Header("Use Laser")]
     public bool useLaser = false;
     public int damageOverTime = 30; //dps
+    public float slowPct = .5f; // slow percentage
     public LineRenderer lineRenderer; 
 
     [Header("Setup")]
     //creates the tag for enemies
     public string enemyTag = "Enemy";
-
     public Transform attackPoint;
 
 
@@ -61,7 +61,7 @@ public class Tower : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
-            targetEnemy = nearestEnemy.GetComponent<moveEnemy>();
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
         } else
         {
             target = null;
@@ -79,8 +79,7 @@ public class Tower : MonoBehaviour
             return;
 
         }
-
-        transform.LookAt(target);
+        transform.LookAt(target); //rotate to look at enemy
 
         if (useLaser){
             Laser();
@@ -99,7 +98,8 @@ public class Tower : MonoBehaviour
 
     void Laser(){
         targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
-
+        targetEnemy.Slow(slowPct); // take in val 0-1 
+        
         if(!lineRenderer.enabled){
             lineRenderer.enabled = true;
         }

@@ -300,10 +300,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  targetEnemy: {fileID: 0}
   range: 15
   attackPrefab: {fileID: 0}
   attackSpeed: 1
   useLaser: 1
+  damageOverTime: 30
   lineRenderer: {fileID: 7206277080993749979}
   enemyTag: Enemy
   attackPoint: {fileID: 4140080796286236256}
@@ -355,7 +357,7 @@ LineRenderer:
   - {x: 0, y: 3, z: 5}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.3
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:

@@ -7367,7 +7367,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_text
-      value: "Laser\nFrog \n(350)\n"
+      value: 'Sticky Tongue Frog
+
+        (350)
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize
