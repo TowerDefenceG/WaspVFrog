@@ -30,16 +30,17 @@ public class Node : MonoBehaviour{
     }
 
     private void OnMouseDown() { //click on tile
+		Debug.Log("Node clicked");
         if (EventSystem.current.IsPointerOverGameObject()){
             return;
-        }
-
-        if (!buildManager.CanBuild){
-            return;
-        }
+  		}
 
         if (turret != null){ //no turret already build on this tile 
-            Debug.Log("Can't build there! - Todo: display on screen"); 
+            Debug.Log("Can't build there! - Todo: display on screen");
+			buildManager.selectNode(this); 
+            return;
+        }
+		if (!buildManager.CanBuild){
             return;
         }
         // Debug.Log("Build turret");

@@ -5,10 +5,10 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance; //access without class, static so its shared. stores a reference to itself
-
+    public NodeUI nodeUI;
     void Awake (){
         //called before Start()
-
+		
         if (instance != null){
             Debug.LogError("More than one BuildManager in scene!");
         }
@@ -17,6 +17,8 @@ public class BuildManager : MonoBehaviour
     }
 
     private TurretBlueprint turretToBuild; 
+	//selected turret 
+	private Node selectedNode; 
 
     public bool CanBuild { get { return turretToBuild != null; } } //a property (like a small function) checks condition each time its used
 
@@ -33,8 +35,25 @@ public class BuildManager : MonoBehaviour
 
         Debug.Log("turret built, money left: " + PlayerStats.Money);
     }
+	
+	public void DeselectNode(){
+        selectedNode = null;
+        nodeUI.Hide();
+    }
+
+	public void selectNode(Node node){
+	    if (selectedNode == node){
+            Debug.Log("deselecting node");
+            DeselectNode();
+            return;
+        }
+        selectedNode = node;
+        turretToBuild = null;
+        nodeUI.SetTarget(node);
+    }
 
     public void SelectTurretToBuild(TurretBlueprint turret){
         turretToBuild = turret; 
+		DeselectNode();
     }
 }

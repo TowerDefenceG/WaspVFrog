@@ -11,5 +11,8 @@ public class TurretBlueprint
     public GameObject prefab;
     public int cost;
 
+    private void OnMouseDown() { //click on tile
+        Debug.Log("TurretBlueprint clicked");
+    }
 
 }

@@ -36,6 +36,10 @@ public class Tower : MonoBehaviour
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
+    
+    private void OnMouseDown() { //click on tile
+        Debug.Log("Tower clicked");
+    }
 
     void UpdateTarget()
     {

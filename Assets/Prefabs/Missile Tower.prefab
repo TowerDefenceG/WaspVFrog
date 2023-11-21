@@ -1322,7 +1322,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6787638699113920538}
@@ -1353,10 +1353,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  targetEnemy: {fileID: 0}
   range: 20
-  attackSpeed: 0.5
-  enemyTag: Enemy
   attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
+  attackSpeed: 0.5
+  useLaser: 0
+  damageOverTime: 30
+  slowPct: 0.5
+  lineRenderer: {fileID: 0}
+  enemyTag: Enemy
   attackPoint: {fileID: 3564106367630568424}
 --- !u!1 &9037880925855218692
 GameObject:

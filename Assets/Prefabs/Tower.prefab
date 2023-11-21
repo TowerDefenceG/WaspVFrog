@@ -1115,7 +1115,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 868542132524506761}
@@ -1217,10 +1217,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  targetEnemy: {fileID: 0}
   range: 15
   attackPrefab: {fileID: 5300432638263304809, guid: e96cacaac67504f4792d1468bd25b3c1, type: 3}
   attackSpeed: 1
   useLaser: 0
+  damageOverTime: 30
+  slowPct: 0.5
   lineRenderer: {fileID: 0}
   enemyTag: Enemy
   attackPoint: {fileID: 3469674485978384527}
