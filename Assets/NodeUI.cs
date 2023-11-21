@@ -27,4 +27,11 @@ public class NodeUI : MonoBehaviour
     {
         ui.SetActive(false);
     }
+    
+    public void Sell()
+    {
+        Debug.Log("NodeUI.Sell()");
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
+    }
 }

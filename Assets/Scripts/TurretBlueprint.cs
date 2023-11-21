@@ -14,5 +14,9 @@ public class TurretBlueprint
     private void OnMouseDown() { //click on tile
         Debug.Log("TurretBlueprint clicked");
     }
+    
+    public int GetSellAmount(){
+        return cost/2;
+    }
 
 }

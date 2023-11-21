@@ -22,19 +22,7 @@ public class BuildManager : MonoBehaviour
 
     public bool CanBuild { get { return turretToBuild != null; } } //a property (like a small function) checks condition each time its used
 
-    public void BuildTurretOn(Node node){
-        if (PlayerStats.Money < turretToBuild.cost){
-            Debug.Log("not enough money to build that");
-            return;
-        }
-
-        PlayerStats.Money -= turretToBuild.cost; //subtract turret cost
-
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
-
-        Debug.Log("turret built, money left: " + PlayerStats.Money);
-    }
+    
 	
 	public void DeselectNode(){
         selectedNode = null;
@@ -55,5 +43,9 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret){
         turretToBuild = turret; 
 		DeselectNode();
+    }
+    
+    public TurretBlueprint GetTurretToBuild(){
+        return turretToBuild;
     }
 }
