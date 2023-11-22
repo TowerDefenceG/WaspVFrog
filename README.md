@@ -1,11 +1,11 @@
 # Fantasy Frogs: Guardians of the Pond
 prototype build: https://towerdefenceg.github.io/WaspVFrog/v0.1/index.html
+week 9 playtesting: https://towerdefenceg.github.io/WaspVFrogBuilds/v0.2/index.html
 
-This is a tower defence game where the frogs must defend their village from the wasps.
+Welcome to our tower defence game! Protect the frog village from incoming waves of wasps by strategically placing three frog types along the path. Currently featuring one level, your goal is to deploy frogs wisely, each with unique abilities, to fend off the wasps and safeguard the frog village. 
 
-Place frog towers by selecting a frog type from the shop on the right and then clicking a tile in the grid to place the frog.
-The yellow frogs have a shorter range but faster firing speed while the orange frogs have a larger range but slower speed.
-
-Money is gained by killing wasps (currently blue spheres) and spent by buying more towers
-
-Waves will keep spawning indefinitely until all lives are lost, showing the game over screen (buttons currently non-functional). 
+How to play 
+- With your mouse, select a frog type from the shop on the left. Click any tile on the board to place your chosen frog. 
+- Need more firepower? Upgrade standard and missile frogs (yellow and orange) by clicking their tile and selecting 'upgrade.' 
+- Frogs can be sold to earn back some money by clicking on them and selecting ‘sell’ 
+Master these actions to strategically defend the frog village! 
