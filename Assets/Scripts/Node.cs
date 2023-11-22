@@ -10,11 +10,13 @@ public class Node : MonoBehaviour{
     public Color startColor;
     public Vector3 positionOffset;
 
-    [Header("Optional")] //optional parameter in unity
+
     [HideInInspector] //hides public variable in unity
 	public GameObject turret; //current turret on tile (null if empty)
 	[HideInInspector] //hides public variable in unity
 	public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
     private Renderer rend;
     //private Color startColor;
 
@@ -34,10 +36,10 @@ public class Node : MonoBehaviour{
     }
 
     private void OnMouseDown() { //click on tile
-		Debug.Log("Node clicked");
+		// Debug.Log("Node clicked");
         if (EventSystem.current.IsPointerOverGameObject()){
             return;
-  		}
+            }
 
         if (turret != null){ //no turret already build on this tile 
             Debug.Log("Can't build there! - Todo: display on screen");
@@ -90,6 +92,27 @@ public class Node : MonoBehaviour{
         Debug.Log("turret built!");
 	}
 
+public void UpgradeTurret ()
+{
+    if (PlayerStats.Money < turretBlueprint.upgradeCost)
+    {
+        Debug.Log("Not enough money to upgrade that!");
+        return;
+    }
+        PlayerStats.Money -= turretBlueprint.upgradeCost;
+
+        //get rid of old turret
+        Destroy(turret);
+
+        //build a new turret
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+
+        isUpgraded = true;
+
+        Debug.Log("turret upgraded!");
+}
     void OnMouseEnter (){
         // called once every time mouse enters collider of object
         if (EventSystem.current.IsPointerOverGameObject()){ // stop accidental clickthrough if UI button is over a tile

@@ -6,6 +6,7 @@ public class NodeUI : MonoBehaviour
 {
     private Node target;
     public GameObject ui;
+
     public void SetTarget(Node _target)
     {
         target = _target;
@@ -21,13 +22,19 @@ public class NodeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Hide()
     {
         ui.SetActive(false);
     }
-    
+
+        public void Upgrade()
+    {
+        target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
     public void Sell()
     {
         Debug.Log("NodeUI.Sell()");
