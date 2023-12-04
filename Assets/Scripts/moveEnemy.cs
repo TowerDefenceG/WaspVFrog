@@ -54,7 +54,7 @@ public class moveEnemy : MonoBehaviour{
         PlayerStats.decreaseLives();
         //log lives
         Debug.Log("Lives: " + PlayerStats.Lives);
-
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 

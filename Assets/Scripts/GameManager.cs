@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         if(PlayerStats.Lives <= 0){
             EndGame();
         }
-        if(PlayerStats.Rounds >= waveSurvived){
+        if(PlayerStats.Rounds > waveSurvived){
             WonLevel();
         }
 
