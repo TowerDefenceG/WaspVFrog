@@ -119,14 +119,14 @@ public class Node : MonoBehaviour{
 	void BuildTurret(TurretBlueprint blueprint){
         
         if (PlayerStats.Money < blueprint.cost){
-                EditorUtility.DisplayDialog("Not Enough Money",
-                    "You only have " + PlayerStats.Money
-                    + " while this turret costs "+ blueprint.cost, "OK");
-                Debug.Log("not enough money to build that");
+                // EditorUtility.DisplayDialog("Not Enough Money",
+                //     "You only have " + PlayerStats.Money
+                //     + " while this turret costs "+ blueprint.cost, "OK");
+                // Debug.Log("not enough money to build that");
                 return;
             }
 
-        //     PlayerStats.Money -= blueprint.cost; //subtract turret cost
+            PlayerStats.Money -= blueprint.cost; //subtract turret cost
 
             if(!HasBarriers()){
                 GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);

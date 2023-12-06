@@ -303,11 +303,11 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   range: 15
   attackPrefab: {fileID: 0}
-  attackSpeed: 1
-  useLaser: 0
+  attackSpeed: 0
+  useLaser: 1
   damageOverTime: 30
   slowPct: 0.5
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 7206277080993749979}
   enemyTag: Enemy
   attackPoint: {fileID: 4140080796286236256}
 --- !u!120 &7206277080993749979

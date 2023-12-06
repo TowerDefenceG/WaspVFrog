@@ -1222,8 +1222,8 @@ MonoBehaviour:
   attackPrefab: {fileID: 5300432638263304809, guid: e96cacaac67504f4792d1468bd25b3c1, type: 3}
   attackSpeed: 1
   useLaser: 0
-  damageOverTime: 30
-  slowPct: 0.5
+  damageOverTime: 0
+  slowPct: 0
   lineRenderer: {fileID: 0}
   enemyTag: Enemy
   attackPoint: {fileID: 3469674485978384527}
