@@ -3,6 +3,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEditor;
+using System.Collections;
 
 
 public class Node : MonoBehaviour{
@@ -30,6 +31,27 @@ public class Node : MonoBehaviour{
 
         buildManager = BuildManager.instance;
 		turretBlueprint = buildManager.GetTurretToBuild();
+
+        //create random barriers
+        if (Random.Range(0f, 1f)>0.8f){
+            SpawnEnvironmentPrefab();
+        }
+    }
+
+    //swan random barriers
+    private void SpawnEnvironmentPrefab(){
+        GameObject environmentPrefab = GetRandomPrefab();
+        Instantiate(environmentPrefab, GetBuildPosition(), Quaternion.identity);
+    }
+    private GameObject GetRandomPrefab(){
+        GameObject[] environmentPrefabs = GameObject.FindGameObjectsWithTag("barriers");
+        if(environmentPrefabs.Length > 0){
+            int randomIndex = Random.Range(0, environmentPrefabs.Length);
+            return environmentPrefabs[randomIndex];
+        }else{
+            Debug.LogError("No barrier prefabs found");
+            return null;
+        }
     }
 
     public Vector3 GetBuildPosition(){
@@ -47,12 +69,26 @@ public class Node : MonoBehaviour{
 			buildManager.selectNode(this); 
             return;
         }
+        if (HasBarriers()){ //no turret build on environment prefabs
+            Debug.Log("Can't build there! Node has barriers.");
+            return;
+        }
 		if (!buildManager.CanBuild){
             return;
         }
         Debug.Log("Node.OnMouseDown() Build turret");
 		turretBlueprint = buildManager.GetTurretToBuild();
         BuildTurret (turretBlueprint);
+    }
+    //detect if there's barriers prefabs on the node
+    private bool HasBarriers(){
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 8f);
+        foreach (Collider collider in colliders){
+            if (collider.CompareTag("barriers")){
+                return true;
+            }
+        }
+        return false;
     }
 
 // a method to sell a turret on a node and return the money to the player
@@ -79,21 +115,24 @@ public class Node : MonoBehaviour{
 }
 
 	void BuildTurret(TurretBlueprint blueprint){
-	if (PlayerStats.Money < blueprint.cost){
-             EditorUtility.DisplayDialog("Not Enough Money",
-                "You only have " + PlayerStats.Money
-                + " while this turret costs "+ blueprint.cost, "OK");
-            Debug.Log("not enough money to build that");
-            return;
+        if (turret == null){
+            SpawnEnvironmentPrefab();
         }
+        if (PlayerStats.Money < blueprint.cost){
+                EditorUtility.DisplayDialog("Not Enough Money",
+                    "You only have " + PlayerStats.Money
+                    + " while this turret costs "+ blueprint.cost, "OK");
+                Debug.Log("not enough money to build that");
+                return;
+            }
 
-        PlayerStats.Money -= blueprint.cost; //subtract turret cost
+            PlayerStats.Money -= blueprint.cost; //subtract turret cost
 
-        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-        turret = _turret;
-		turretBlueprint = blueprint;
+            GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            turretBlueprint = blueprint;
 
-        Debug.Log("turret built!");
+            Debug.Log("turret built!");
 	}
 
 public void UpgradeTurret ()
