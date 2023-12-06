@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 
 public class Node : MonoBehaviour{
@@ -79,6 +80,9 @@ public class Node : MonoBehaviour{
 
 	void BuildTurret(TurretBlueprint blueprint){
 	if (PlayerStats.Money < blueprint.cost){
+             EditorUtility.DisplayDialog("Not Enough Money",
+                "You only have " + PlayerStats.Money
+                + " while this turret costs "+ blueprint.cost, "OK");
             Debug.Log("not enough money to build that");
             return;
         }
