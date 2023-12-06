@@ -21,6 +21,7 @@ public class Node : MonoBehaviour{
     public bool isUpgraded = false;
     private Renderer rend;
     //private Color startColor;
+    public float environmentLevel = 0.8f;
 
     BuildManager buildManager;
 	
@@ -33,7 +34,7 @@ public class Node : MonoBehaviour{
 		turretBlueprint = buildManager.GetTurretToBuild();
 
         //create random barriers
-        if (Random.Range(0f, 1f)>0.8f){
+        if (Random.Range(0f, 1f) > environmentLevel){
             SpawnEnvironmentPrefab();
         }
     }
@@ -69,7 +70,7 @@ public class Node : MonoBehaviour{
 			buildManager.selectNode(this); 
             return;
         }
-        if (HasBarriers()){ //no turret build on environment prefabs
+        if (HasBarriers()){ //barriers built on environment prefabs
             Debug.Log("Can't build there! Node has barriers.");
             return;
         }
@@ -82,7 +83,8 @@ public class Node : MonoBehaviour{
     }
     //detect if there's barriers prefabs on the node
     private bool HasBarriers(){
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 8f);
+        float radius = transform.localScale.z; 
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider collider in colliders){
             if (collider.CompareTag("barriers")){
                 return true;
@@ -115,24 +117,27 @@ public class Node : MonoBehaviour{
 }
 
 	void BuildTurret(TurretBlueprint blueprint){
-        if (turret == null){
-            SpawnEnvironmentPrefab();
-        }
-        // if (PlayerStats.Money < blueprint.cost){
-        //         EditorUtility.DisplayDialog("Not Enough Money",
-        //             "You only have " + PlayerStats.Money
-        //             + " while this turret costs "+ blueprint.cost, "OK");
-        //         Debug.Log("not enough money to build that");
-        //         return;
-        //     }
+        
+        if (PlayerStats.Money < blueprint.cost){
+                EditorUtility.DisplayDialog("Not Enough Money",
+                    "You only have " + PlayerStats.Money
+                    + " while this turret costs "+ blueprint.cost, "OK");
+                Debug.Log("not enough money to build that");
+                return;
+            }
 
         //     PlayerStats.Money -= blueprint.cost; //subtract turret cost
 
-        //     GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-        //     turret = _turret;
-        //     turretBlueprint = blueprint;
+            if(!HasBarriers()){
+                GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+                turret = _turret;
+                turretBlueprint = blueprint;
 
-        //     Debug.Log("turret built!");
+                Debug.Log("turret built!");
+            }else{
+                Debug.Log("turret cannot be built.");
+            }
+
 	}
 
 public void UpgradeTurret ()
