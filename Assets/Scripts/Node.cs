@@ -118,21 +118,21 @@ public class Node : MonoBehaviour{
         if (turret == null){
             SpawnEnvironmentPrefab();
         }
-        if (PlayerStats.Money < blueprint.cost){
-                EditorUtility.DisplayDialog("Not Enough Money",
-                    "You only have " + PlayerStats.Money
-                    + " while this turret costs "+ blueprint.cost, "OK");
-                Debug.Log("not enough money to build that");
-                return;
-            }
+        // if (PlayerStats.Money < blueprint.cost){
+        //         EditorUtility.DisplayDialog("Not Enough Money",
+        //             "You only have " + PlayerStats.Money
+        //             + " while this turret costs "+ blueprint.cost, "OK");
+        //         Debug.Log("not enough money to build that");
+        //         return;
+        //     }
 
-            PlayerStats.Money -= blueprint.cost; //subtract turret cost
+        //     PlayerStats.Money -= blueprint.cost; //subtract turret cost
 
-            GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-            turret = _turret;
-            turretBlueprint = blueprint;
+        //     GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        //     turret = _turret;
+        //     turretBlueprint = blueprint;
 
-            Debug.Log("turret built!");
+        //     Debug.Log("turret built!");
 	}
 
 public void UpgradeTurret ()
