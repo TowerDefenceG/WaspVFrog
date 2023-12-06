@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         // if(Input.GetKeyDown("e")){
         //     EndGame();
         // }
+        Debug.Log(waveSurvived);
 
         if(PlayerStats.Lives <= 0){
             EndGame();
