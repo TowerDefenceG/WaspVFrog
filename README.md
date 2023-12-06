@@ -1,7 +1,7 @@
 # Fantasy Frogs: Guardians of the Pond
 prototype build: https://towerdefenceg.github.io/WaspVFrog/v0.1/index.html
-
 week 9 playtesting: https://towerdefenceg.github.io/WaspVFrogBuilds/v0.2/index.html
+**week 11 playtesting: https://towerdefenceg.github.io/WaspVFrogBuilds/v0.3.1/index.html**
 
 Welcome to our tower defence game! Protect the frog village from incoming waves of wasps by strategically placing three frog types along the path. Currently featuring one level, your goal is to deploy frogs wisely, each with unique abilities, to fend off the wasps and safeguard the frog village. 
 
@@ -11,3 +11,8 @@ How to play
 - Frogs can be sold to earn back some money by clicking on them and selecting ‘sell’
 
 Master these actions to strategically defend the frog village! 
+
+assets used:
+https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153 
+https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-free-260367 
+
