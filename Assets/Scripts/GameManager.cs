@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         // if(Input.GetKeyDown("e")){
         //     EndGame();
         // }
-        Debug.Log(waveSurvived);
 
         if(PlayerStats.Lives <= 0){
             EndGame();
@@ -40,5 +39,15 @@ public class GameManager : MonoBehaviour
     void WonLevel(){
         levelWon = true;
         levelWonUI.SetActive(true);
+    }
+
+    public void ToggleSpeed(){
+        if(Time.timeScale == 1){
+            Time.timeScale = 2f;
+            Time.fixedDeltaTime = 2f;
+        }else if(Time.timeScale == 2){
+            Time.timeScale = 1f; 
+            Time.fixedDeltaTime = 1f; // use if speeding up/ slowing down 
+        }
     }
 }
