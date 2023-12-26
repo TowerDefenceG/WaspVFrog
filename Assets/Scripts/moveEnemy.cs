@@ -51,9 +51,11 @@ public class moveEnemy : MonoBehaviour{
 
     void EndPath()
     {
+        PlayerStats playerStatsInstance = new PlayerStats();
         PlayerStats.decreaseLives();
+                // PlayerStats.decreaseLives();
         //log lives
-        Debug.Log("Lives: " + PlayerStats.Lives);
+        // Debug.Log("Lives: " + PlayerStats.Lives);
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
