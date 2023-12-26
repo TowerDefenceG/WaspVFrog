@@ -46,7 +46,7 @@ public class WaveSpawner : MonoBehaviour
         PlayerStats.Rounds++;  
         Debug.Log(PlayerStats.Rounds);
          
-        waveNumberText.text = ("Wave: " + waveIndex.ToString());
+        waveNumberText.text = (waveIndex.ToString());
 
         Wave wave = waves[waveIndex];
 

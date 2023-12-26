@@ -28,8 +28,8 @@ public class PauseMenu : MonoBehaviour
    public void Retry(){
         // reload current scene
         Toggle(); //unpause 
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        // SceneManager.LoadScene(1);
    }
 
    public void Menu(){
