@@ -84,7 +84,7 @@ public class Node : MonoBehaviour{
     }
     //detect if there's barriers prefabs on the node
     private bool HasBarriers(){
-        float radius = transform.localScale.z; 
+        float radius = transform.localScale.z/3; 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider collider in colliders){
             if (collider.CompareTag("barriers")){
