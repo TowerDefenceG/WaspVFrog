@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 0.2, z: 4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4.4988084, y: 0.22494045, z: 4.4988084}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c94ffa316ce0d654fad226ac7f0feb21, type: 2}
+  - {fileID: 2100000, guid: 05f1fad089d398e45bf93db849a689d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,13 +118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cc0abbaa70a70469268ec4dc0ac9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.1957917, g: 0.3962264, b: 0.18465644, a: 0}
+  hoverColor: {r: 0.39385983, g: 0.7830189, b: 0.19501601, a: 0.68235296}
   startColor: {r: 0.39607844, g: 0.6784314, b: 0.38039216, a: 0}
+  invalidColor: {r: 0.8207547, g: 0.12698463, b: 0.12698463, a: 0.5529412}
   positionOffset: {x: 0, y: 2, z: 0}
   turret: {fileID: 0}
   turretBlueprint:
     prefab: {fileID: 0}
     cost: 0
+    sellCost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isUpgraded: 0
+  environmentLevel: 0.8

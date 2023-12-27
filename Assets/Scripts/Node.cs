@@ -10,6 +10,7 @@ public class Node : MonoBehaviour{
 
     public Color hoverColor;
     public Color startColor;
+    public Color invalidColor;
     public Vector3 positionOffset;
 
 
@@ -108,11 +109,23 @@ public class Node : MonoBehaviour{
             return;
         }
 
-        if (!buildManager.CanBuild){ //only highlight tiles if we have a turret to build
+        
+        if (turret != null){ //no turret already build on this tile 
+            Debug.Log("turret already");
+            rend.material.color = invalidColor;
+            return;
+        }
+        if (HasBarriers()){ //barriers built on environment prefabs
+            Debug.Log("obstacle");
+            rend.material.color = invalidColor;
             return;
         }
 
-        rend.material.color = hoverColor; //gets material colour from object
+        if (!buildManager.CanBuild){ //only highlight tiles if we have a turret to build
+            Debug.Log("can build");
+            rend.material.color = hoverColor; 
+            return;
+        }
 
 }
 
