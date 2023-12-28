@@ -40,6 +40,7 @@ public class LevelGenerator : MonoBehaviour
         grid = new Node[n, m];
 
         // Create the grid
+        Debug.Log("GenerateLevel() grid of " + n + "x" + m + " nodes");
         for (int x = 0; x < n; x++)
         {
             for (int z = 0; z < m; z++)
@@ -51,7 +52,7 @@ public class LevelGenerator : MonoBehaviour
                 //Debug.Log("GenerateLevel() (x,z)=(" + x +"," + z + "), position = " + position);
                 GameObject node = Instantiate(gNodePrefab, position, Quaternion.identity, gTransform);
                 grid[x,z] = node.GetComponent<Node>();
-                Debug.Log("GenerateLevel() grid[" + x + "," + z + "] = " + grid[x,z]);
+                //Debug.Log("GenerateLevel() grid[" + x + "," + z + "] = " + grid[x,z]);
             }
         }
 
@@ -102,7 +103,7 @@ public class LevelGenerator : MonoBehaviour
 
             for (int j = 0; j < nextPath.Length; j++)
             {
-                Debug.Log("CreatePath() pathPoint = " + nextPath[i]);
+                //Debug.Log("CreatePath() pathPoint = " + nextPath[i]);
                 // first destroy the node at the path point
                 if (grid[nextPath[j][0], nextPath[j][1]] != null) {
                     Destroy(grid[nextPath[j][0], nextPath[j][1]].gameObject);
@@ -111,7 +112,7 @@ public class LevelGenerator : MonoBehaviour
 
                 // After calculating the path, instantiate the Path prefabs
                 Vector3 pathPosition = new Vector3(startX + nextPath[j][0]*tileWidth, 0, startZ - nextPath[j][1]*tileHeight);
-                Debug.Log("CreatePath() pathPosition = " + pathPosition);
+                //Debug.Log("CreatePath() pathPosition = " + pathPosition);
                 Instantiate(gPathPrefab, pathPosition, Quaternion.identity, gTransform);
             }
         }
@@ -122,7 +123,7 @@ public class LevelGenerator : MonoBehaviour
         for(int i = 0; i < waypoint.Length; i++)
         {
             Vector3 waypointPosition = new Vector3(startX + waypoint[i][0]*tileWidth, 2.41f, startZ - waypoint[i][1]*tileHeight);
-            Debug.Log("CreatePath() waypointPosition = " + waypointPosition);
+            //Debug.Log("CreatePath() waypointPosition = " + waypointPosition);
             Instantiate(gWaypointPrefab, waypointPosition, Quaternion.identity, Waypoints.gTransform);
         }
 

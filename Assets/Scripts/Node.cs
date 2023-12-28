@@ -122,7 +122,7 @@ public class Node : MonoBehaviour{
         }
 
         if (!buildManager.CanBuild){ //only highlight tiles if we have a turret to build
-            Debug.Log("can build");
+            //Debug.Log("can build");
             rend.material.color = hoverColor; 
             return;
         }

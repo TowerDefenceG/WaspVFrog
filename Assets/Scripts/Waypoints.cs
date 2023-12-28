@@ -22,12 +22,15 @@ public class Waypoints : MonoBehaviour
     }
 
     public static void Generate(){
-        Debug.Log("wayPoints.Generate");
+        Debug.Log("wayPoints.Generate " + gTransform.childCount + " waypoints");
         // Get all the points in the path
-        points=new Transform[gTransform.childCount];
-        // Store all the points in the array
-        for(int i=0; i < points.Length; i++){
-            points[i] = gTransform.GetChild(i);
+        if (gTransform.childCount > 0){
+            Transform[] localPoints = new Transform[gTransform.childCount];
+            // Store all the points in the array
+            for(int i=0; i < localPoints.Length; i++){
+                localPoints[i] = gTransform.GetChild(i);
+            }
+            points = localPoints;
         }
     }
 }
