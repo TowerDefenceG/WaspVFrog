@@ -11,29 +11,33 @@ public class moveEnemy : MonoBehaviour{
     void Start(){
         enemy = GetComponent<Enemy>();
         // Set the target to the first waypoint
-        target = Waypoints.points[0];
+        target = Waypoints.points?[0];
     }
 
     void Update(){
-        if (!GameManager.gameIsOver){
-            // Move the enemy towards the waypoint
-            Vector3 dir = target.position - transform.position;
-            // Move the enemy towards the waypoint
-            transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+        if (target == null) {
+            target = Waypoints.points?[0];
+        } else {
+            if (!GameManager.gameIsOver){
+                // Move the enemy towards the waypoint
+                Vector3 dir = target.position - transform.position;
+                // Move the enemy towards the waypoint
+                transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 
-            // look in direction it is moving
-            Vector3 relativePos = target.position - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-            transform.rotation = rotation;
+                // look in direction it is moving
+                Vector3 relativePos = target.position - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+                transform.rotation = rotation;
 
-            // If the enemy reaches the waypoint, get the next waypoint
-            if (Vector3.Distance(transform.position, target.position) <= 0.4f)
-            {
-                GetNextWaypoint();
+                // If the enemy reaches the waypoint, get the next waypoint
+                if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+                {
+                    GetNextWaypoint();
+                }
             }
-        }
 
-        enemy.speed = enemy.startSpeed;
+            enemy.speed = enemy.startSpeed;
+        }
     }
 
     // Get the next waypoint
