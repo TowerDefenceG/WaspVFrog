@@ -86,15 +86,32 @@ public class LevelGenerator : MonoBehaviour
         return path.ToArray();
     }
 
+    private static Vector2Int[] CreateWaypoints(Vector2Int start, Vector2Int end, int maxTurns) {
+        Vector2Int[] waypoint = new Vector2Int[7];
+        waypoint[0] = start; 
+        
+        waypoint[1] = new Vector2Int(waypoint[0][0] - Random.Range(2, 6), waypoint[0][1]);
+        waypoint[2] = new Vector2Int(waypoint[1][0], waypoint[1][1] + Random.Range(3, 6));
+
+        waypoint[3] = new Vector2Int(waypoint[2][0] - Random.Range(2, 6), waypoint[2][1]);
+        waypoint[4] = new Vector2Int(waypoint[3][0], waypoint[3][1] + Random.Range(3, 6));
+
+        waypoint[5] = new Vector2Int(end[0], waypoint[4][1]);
+        waypoint[6] = new Vector2Int(end[0], end[1]);
+
+        return waypoint;
+    }
+
     private static void CreatePath(Vector2Int start, Vector2Int end, int maxTurns)
     {
         // generate the "turning points" of the path
-        Vector2Int[] waypoint = new Vector2Int[5];
-        waypoint[0] = start;
-        waypoint[1] = new Vector2Int(10, 1);
-        waypoint[2] = new Vector2Int(10, 10);
-        waypoint[3] = new Vector2Int(1, 10);
-        waypoint[4] = new Vector2Int(1, 14);
+        // Vector2Int[] waypoint = new Vector2Int[5];
+        // waypoint[0] = start;
+        // waypoint[1] = new Vector2Int(10, 1);
+        // waypoint[2] = new Vector2Int(10, 10);
+        // waypoint[3] = new Vector2Int(1, 10);
+        // waypoint[4] = new Vector2Int(1, 14);
+        Vector2Int[] waypoint = CreateWaypoints(start, end, maxTurns);
 
         // generate the path between the turning points
         for (int i = 1; i < waypoint.Length; i++)
