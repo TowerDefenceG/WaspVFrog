@@ -8,6 +8,7 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] ParticleSystem damageParticle;
     public static int Money; //accessible only using playerstats type
     public int startMoney = 400; //accessible in unity editor
     public static int Lives;
@@ -22,6 +23,8 @@ public class PlayerStats : MonoBehaviour
     public List<GameObject> hearts;
 
     public static PlayerStats Instance;
+
+    
 
     void Awake(){
         if (Instance == null){
@@ -42,7 +45,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     void Update(){
-         moneyText.text = (Money.ToString() ); //change to whatever currency we want, maybe an icon
+        moneyText.text = (Money.ToString() ); //change to whatever currency we want, maybe an icon
     }
     
     public static void decreaseLives(){
@@ -58,6 +61,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     void LoseHeart(){
+        damageParticle.Play();
         for (int i = hearts.Count - 1; i >= 0; i--){
             if (hearts[i].activeSelf)
             {

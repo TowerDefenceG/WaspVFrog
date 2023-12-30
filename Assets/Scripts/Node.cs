@@ -26,7 +26,7 @@ public class Node : MonoBehaviour{
 
     BuildManager buildManager;
 
-    public Animator uiAnimator;
+    [SerializeField] public Animator uiAnimator;
 
     // public WarningPopup warningPopup;
 	
