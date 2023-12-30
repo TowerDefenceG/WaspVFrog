@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
     public int worth = 50;
 
     void Start(){
-        speed = startSpeed;
+        speed = startSpeed * ModeSelector.GetDifficulty().enemySpeedFactor;
+        Debug.Log("Enemy.Start() speed=" + speed);
     }
 
     void Awake(){
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour
 
     public void Slow(float pct){
         // takes in slowness percentage
-        speed = startSpeed * (1f - pct);
+        speed = startSpeed * (1f - pct) * ModeSelector.GetDifficulty().enemySpeedFactor;
     }
     
     void Die(){

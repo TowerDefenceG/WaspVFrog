@@ -31,7 +31,9 @@ public class WaveSpawner : MonoBehaviour
             if (countdown <= 0f) //countdown reaches 0
             {
                 StartCoroutine(SpawnWave());
-                countdown = timeBetweenWaves; //reset countdown on wave spawn
+                //reset countdown on wave spawn
+                countdown = timeBetweenWaves * ModeSelector.GetDifficulty().timeBetweenWavesFactor ; 
+                Debug.Log("WaveSpawner() countdown reset to " + countdown);
                 return;
             }
 
@@ -44,11 +46,12 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave() {
         
         PlayerStats.Rounds++;  
-        Debug.Log(PlayerStats.Rounds);
+        Debug.Log("SpawnWave() " + PlayerStats.Rounds);
          
         waveNumberText.text = (waveIndex.ToString());
 
         Wave wave = waves[waveIndex];
+        wave.count = (int) (wave.count * ModeSelector.GetDifficulty().waveSizeFactor);
 
         for (int i=0; i< wave.count; i++){
             SpawnEnemy(wave.enemy);

@@ -36,7 +36,7 @@ public class moveEnemy : MonoBehaviour{
                 }
             }
 
-            enemy.speed = enemy.startSpeed;
+            enemy.speed = enemy.startSpeed * ModeSelector.GetDifficulty().enemySpeedFactor;
         }
     }
 
