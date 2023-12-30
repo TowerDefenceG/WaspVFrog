@@ -7,12 +7,12 @@ using System.Collections;
 
 
 public class Node : MonoBehaviour{
+    
 
     public Color hoverColor;
     public Color startColor;
     public Color invalidColor;
     public Vector3 positionOffset;
-
 
     [HideInInspector] //hides public variable in unity
 	public GameObject turret; //current turret on tile (null if empty)
@@ -25,6 +25,10 @@ public class Node : MonoBehaviour{
     public float environmentLevel = 0.8f;
 
     BuildManager buildManager;
+
+    public Animator uiAnimator;
+
+    // public WarningPopup warningPopup;
 	
     private void Start() {
         rend = GetComponent<Renderer>();
@@ -78,7 +82,7 @@ public class Node : MonoBehaviour{
 		if (!buildManager.CanBuild){
             return;
         }
-        Debug.Log("Node.OnMouseDown() Build turret");
+        // Debug.Log("Node.OnMouseDown() Build turret");
 		turretBlueprint = buildManager.GetTurretToBuild();
         BuildTurret (turretBlueprint);
     }
@@ -111,7 +115,7 @@ public class Node : MonoBehaviour{
 
         
         if (turret != null){ //no turret already build on this tile 
-            Debug.Log("turret already");
+            // Debug.Log("turret already");
             rend.material.color = invalidColor;
             return;
         }
@@ -132,12 +136,17 @@ public class Node : MonoBehaviour{
 	void BuildTurret(TurretBlueprint blueprint){
         
         if (PlayerStats.Money < blueprint.cost){
+            // Debug.Log("call showPopup");
+            // warningPopup.ShowPopup();
+            uiAnimator.SetTrigger("NotEnoughMoney");
+            return;
+
                 // EditorUtility.DisplayDialog("Not Enough Money",
                 //     "You only have " + PlayerStats.Money
                 //     + " while this turret costs "+ blueprint.cost, "OK");
                 // Debug.Log("not enough money to build that");
-                return;
-            }
+                // return;
+        }
 
             PlayerStats.Money -= blueprint.cost; //subtract turret cost
 
@@ -146,7 +155,7 @@ public class Node : MonoBehaviour{
                 turret = _turret;
                 turretBlueprint = blueprint;
 
-                Debug.Log("turret built!");
+                // Debug.Log("turret built!");
             }else{
                 Debug.Log("turret cannot be built.");
             }
@@ -157,6 +166,7 @@ public void UpgradeTurret ()
 {
     if (PlayerStats.Money < turretBlueprint.upgradeCost)
     {
+        // StartCoroutine(moneyWarningPopup());
         Debug.Log("Not enough money to upgrade that!");
         return;
     }
@@ -190,4 +200,7 @@ public void UpgradeTurret ()
     private void OnMouseExit() {
         rend.material.color = startColor;
     }
+
 }
+
+

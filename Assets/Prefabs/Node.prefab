@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8823436216778179151}
   - component: {fileID: 5743837076623339816}
   - component: {fileID: -8422947998687873791}
+  - component: {fileID: 8897511524459815958}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -131,3 +132,17 @@ MonoBehaviour:
     upgradeCost: 0
   isUpgraded: 0
   environmentLevel: 0.8
+  warningPopup: {fileID: 8897511524459815958}
+--- !u!114 &8897511524459815958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205128958927049124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22dff7dcc3fa5ce4dbad06e1f76f22ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupPanel: {fileID: 0}
