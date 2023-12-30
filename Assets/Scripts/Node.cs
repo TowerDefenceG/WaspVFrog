@@ -27,6 +27,7 @@ public class Node : MonoBehaviour{
     BuildManager buildManager;
 
     [SerializeField] public Animator uiAnimator;
+    [SerializeField] ParticleSystem placeParticle;
     
 
     // public WarningPopup warningPopup;
@@ -86,6 +87,7 @@ public class Node : MonoBehaviour{
         // Debug.Log("Node.OnMouseDown() Build turret");
 		turretBlueprint = buildManager.GetTurretToBuild();
         BuildTurret (turretBlueprint);
+        placeParticle.Play();
     }
     //detect if there's barriers prefabs on the node
     private bool HasBarriers(){

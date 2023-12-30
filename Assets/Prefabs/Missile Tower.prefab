@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
-  range: 20
+  range: 25
   attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
   attackSpeed: 0.5
   useLaser: 0

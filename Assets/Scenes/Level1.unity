@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.004035936, g: 0.028884932, b: 0.0061454526, a: 1}
+  m_IndirectSpecularColor: {r: 0.002719873, g: 0.019454991, b: 0.0041427757, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10859,7 +10859,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.4
+      scalar: 0.3
       minScalar: 0.2
       maxCurve:
         serializedVersion: 2
@@ -10912,8 +10912,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 40
-      minScalar: 15
+      scalar: 50
+      minScalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -12109,7 +12109,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.64705884, g: 0.18039216, b: 0.18039216, a: 1}
+        key0: {r: 0.64705884, g: 0.18039215, b: 0.1932932, a: 1}
         key1: {r: 0.9811321, g: 0.79772395, b: 0.15179773, a: 0}
         key2: {r: 0.64705884, g: 0.18039216, b: 0.18039216, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 1}
@@ -12125,7 +12125,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 18256
+        atime0: 23717
         atime1: 65535
         atime2: 31987
         atime3: 46067
@@ -14620,7 +14620,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 1
     light: {fileID: 7092904803033577222, guid: 887f2984ee20c2745b9e4b67759baaa8, type: 3}
     randomDistribution: 1
@@ -14630,7 +14630,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14683,7 +14683,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14733,7 +14733,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 5
+    maxLights: 10
   TrailModule:
     enabled: 1
     mode: 0
@@ -26491,6 +26491,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8422947998687873791, guid: 35f69a0995fa4436f801abba012c6845, type: 3}
       propertyPath: positionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441829291641083972, guid: 35f69a0995fa4436f801abba012c6845, type: 3}
+      propertyPath: LightsModule.enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7788231757593892474, guid: 35f69a0995fa4436f801abba012c6845, type: 3}

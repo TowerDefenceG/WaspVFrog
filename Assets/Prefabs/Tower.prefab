@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
-  range: 15
+  range: 18
   attackPrefab: {fileID: 5300432638263304809, guid: e96cacaac67504f4792d1468bd25b3c1, type: 3}
   attackSpeed: 1
   useLaser: 0
@@ -1227,7 +1227,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   enemyTag: Enemy
   attackPoint: {fileID: 3469674485978384527}
-  rangeIndicator: {fileID: 3324999101229332163, guid: 1db7505492fb35b4f81457b93015a1fe, type: 3}
 --- !u!1 &6780001415686270569
 GameObject:
   m_ObjectHideFlags: 0
