@@ -355,6 +355,7 @@ MonoBehaviour:
   worth: 15
   impactParticle: {fileID: 8055381894229493606}
   deathParticle: {fileID: 7267719088288412434}
+  deathSound: {fileID: 8300000, guid: b1aa7cb7ab23d494cae795892e64ba94, type: 3}
 --- !u!1 &2482925151279312656
 GameObject:
   m_ObjectHideFlags: 0

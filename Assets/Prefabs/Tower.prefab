@@ -1098,6 +1098,7 @@ GameObject:
   - component: {fileID: 4932910870656477820}
   - component: {fileID: 1410090334647057828}
   - component: {fileID: 6053855507621178100}
+  - component: {fileID: -7085450718027478644}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -1227,6 +1228,19 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   enemyTag: Enemy
   attackPoint: {fileID: 3469674485978384527}
+--- !u!114 &-7085450718027478644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6713292447680504064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c21fd19588ce743b3adad0305fbaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: 4839b15f11750e24889e2608b6a21db8, type: 3}
 --- !u!1 &6780001415686270569
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] ParticleSystem impactParticle;
     [SerializeField] ParticleSystem deathParticle;
+    [SerializeField] private AudioClip deathSound;
 
     void Start(){
         speed = startSpeed * ModeSelector.GetDifficulty().enemySpeedFactor;
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
     }
     
     void Die(){
+        AudioManager.Instance.PlaySound(deathSound);
         PlayerStats.Money += worth;
         Debug.Log("animation");
         StartCoroutine(PlayDeathParticleAndDestroy());
