@@ -5012,7 +5012,7 @@ MonoBehaviour:
   hoverColor: {r: 0.39385983, g: 0.7830189, b: 0.19501601, a: 0.68235296}
   startColor: {r: 0.39607844, g: 0.6784314, b: 0.38039216, a: 0}
   invalidColor: {r: 0.8207547, g: 0.12698463, b: 0.12698463, a: 0.5529412}
-  positionOffset: {x: 0, y: 2, z: 0}
+  positionOffset: {x: 0, y: 5, z: 0}
   turret: {fileID: 0}
   turretBlueprint:
     prefab: {fileID: 0}

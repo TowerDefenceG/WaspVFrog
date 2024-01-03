@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
     void Die(){
         AudioManager.Instance.PlaySound(deathSound);
         PlayerStats.Money += worth;
-        Debug.Log("animation");
+        // Debug.Log("animation");
         StartCoroutine(PlayDeathParticleAndDestroy());
         // Destroy(gameObject);
         // WaveSpawner.EnemiesAlive--; 
@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
         // yield return new WaitForSeconds(0.1f);
         
         // Additional delay if needed
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         // Destroy the enemy after playing the particle
         Destroy(gameObject);

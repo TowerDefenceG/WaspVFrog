@@ -63,7 +63,7 @@ public class Node : MonoBehaviour{
     }
 
     public Vector3 GetBuildPosition(){
-        return transform.position + positionOffset; // position to build turret
+        return transform.position; // + positionOffset; // position to build turret
     }
 
     private void OnMouseDown() { //click on tile
@@ -143,12 +143,6 @@ public class Node : MonoBehaviour{
             // warningPopup.ShowPopup();
             uiAnimator.SetTrigger("NotEnoughMoney");
             return;
-
-                // EditorUtility.DisplayDialog("Not Enough Money",
-                //     "You only have " + PlayerStats.Money
-                //     + " while this turret costs "+ blueprint.cost, "OK");
-                // Debug.Log("not enough money to build that");
-                // return;
         }
 
             PlayerStats.Money -= blueprint.cost; //subtract turret cost
