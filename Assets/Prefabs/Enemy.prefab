@@ -11318,6 +11318,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9be58bbc96c18c64b964d7163eebe3f3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c16b129605638554eb49d4f386647461, type: 2}
     - target: {fileID: 919132149155446097, guid: 9be58bbc96c18c64b964d7163eebe3f3, type: 3}
       propertyPath: m_Name
       value: stylised wasp
