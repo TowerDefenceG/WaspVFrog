@@ -22,6 +22,6 @@ public class LevelSelector : MonoBehaviour
 
     public void LoadLevelPCG()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 }
