@@ -23,7 +23,7 @@ public class WinLevel : MonoBehaviour
 
     void OnEnable(){
         roundsText.text = PlayerStats.Rounds.ToString();
-        moneyText.text = (PlayerStats.Money).ToString();
+        moneyText.text = "£"+(PlayerStats.Money).ToString();
         livesText.text = (PlayerStats.Lives).ToString();
         total = PlayerStats.Money + PlayerStats.Rounds*5 + PlayerStats.Lives*20;
         totalScore.text = total.ToString();
