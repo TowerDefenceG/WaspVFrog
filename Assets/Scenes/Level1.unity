@@ -29154,6 +29154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundsText: {fileID: 1880546596}
+  moneyText: {fileID: 0}
 --- !u!1 &1010672716
 GameObject:
   m_ObjectHideFlags: 0
@@ -43243,6 +43244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundsText: {fileID: 347709932}
+  moneyText: {fileID: 0}
+  livesText: {fileID: 0}
+  totalScore: {fileID: 0}
+  highestScore: {fileID: 0}
 --- !u!1001 &1849405116
 PrefabInstance:
   m_ObjectHideFlags: 0
