@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
         if(PlayerStats.Lives <= 0){
             EndGame();
         }
-        if(PlayerStats.Rounds > waveSurvived){
+        // rounds start at 1...
+        if(PlayerStats.Rounds > waveSurvived+1){
             WonLevel();
         }
 

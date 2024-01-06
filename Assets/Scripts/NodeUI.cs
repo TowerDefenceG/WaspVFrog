@@ -31,7 +31,7 @@ public class NodeUI : MonoBehaviour
     public void Hide()
     {
         ui.SetActive(false);
-        rangeIndicator.gameObject.SetActive(false);
+        rangeIndicator?.gameObject.SetActive(false);
         HideRangeIndicator();
     }
 
@@ -60,7 +60,7 @@ public class NodeUI : MonoBehaviour
     {
         if (rangeIndicator != null)
         {
-            rangeIndicator.gameObject.SetActive(false);
+            rangeIndicator?.gameObject.SetActive(false);
         }
     }
 

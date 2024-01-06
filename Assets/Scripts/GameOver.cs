@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI moneyText;
 
     void OnEnable() {
-        roundsText.text = (PlayerStats.Rounds).ToString();
+        roundsText.text = (PlayerStats.Rounds-1).ToString();
         moneyText.text = "£"+(PlayerStats.Money).ToString();
 
     }
