@@ -59,8 +59,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - UNDERLAY_ON
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -119,7 +118,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.188
+    - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
@@ -148,7 +147,7 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceColor: {r: 0.06662595, g: 0.004024717, b: 0.004024717, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0.07156863, g: 0.012745098, b: 0.01372549, a: 1}
@@ -167,11 +166,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: BRITANIC SDF
+  m_Name: BRITANIC Buttons
   m_EditorClassIdentifier: 
-  hashCode: 1791270809
+  hashCode: -872409747
   material: {fileID: -343555164509114021}
-  materialHashCode: -1288418663
+  materialHashCode: 336925101
   m_Version: 1.1.0
   m_SourceFontFileGUID: 22de8adf7a4faa34ba37f2806c14e1ca
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 22de8adf7a4faa34ba37f2806c14e1ca, type: 3}

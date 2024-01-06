@@ -15,8 +15,8 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f; //cooldown
     private float countdown =2f; //takes 2 seconds to spawn first wave
 
-    public TextMeshProUGUI waveCountdownText;
-    public TextMeshProUGUI waveNumberText;
+    // public TextMeshProUGUI waveCountdownText;
+    // public TextMeshProUGUI waveNumberText;
 
     private int waveIndex = 1; 
 
@@ -44,7 +44,7 @@ public class WaveSpawner : MonoBehaviour
             }
 
             countdown -= Time.deltaTime; // decrase countdown constantly
-            waveCountdownText.text = Mathf.Round(countdown).ToString();
+            // waveCountdownText.text = Mathf.Round(countdown).ToString();
         }
     }
 
@@ -60,7 +60,7 @@ public class WaveSpawner : MonoBehaviour
             this.enabled = false; 
         }
         else {
-            waveNumberText.text = PlayerStats.Rounds.ToString();
+            // waveNumberText.text = PlayerStats.Rounds.ToString();
 
 
             // increase wave size based on difficulty
