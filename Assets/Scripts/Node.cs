@@ -123,7 +123,7 @@ public class Node : MonoBehaviour{
             return;
         }
         if (HasBarriers()){ //barriers built on environment prefabs
-            Debug.Log("obstacle");
+            //Debug.Log("obstacle");
             rend.material.color = invalidColor;
             return;
         }

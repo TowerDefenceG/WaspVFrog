@@ -8,20 +8,19 @@ public class LevelSelector : MonoBehaviour
 {
     public void LoadLevel1()
     {
-        SceneManager.LoadScene(2);
+        LevelGenerator.SetLevel(1);
+        SceneManager.LoadScene(6);
     }
     public void LoadLevel2()
     {
-        SceneManager.LoadScene(3);
+        LevelGenerator.SetLevel(2);
+        SceneManager.LoadScene(7);
     }
 
     public void LoadLevel3()
     {
-        SceneManager.LoadScene(4);
+        LevelGenerator.SetLevel(3);
+        SceneManager.LoadScene(8);
     }
 
-    public void LoadLevelPCG()
-    {
-        SceneManager.LoadScene(5);
-    }
 }
