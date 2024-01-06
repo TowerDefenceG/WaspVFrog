@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/**
+    PCG Level Generator!
+**/
 public class LevelGenerator : MonoBehaviour
 {
     public GameObject nodePrefab; // Assign in inspector
@@ -30,7 +33,7 @@ public class LevelGenerator : MonoBehaviour
         gTransform = transform;
         gWaypointPrefab = waypointPrefab;
          // Call this function to generate the level
-         GenerateLevel(gLevel);
+         GeneratePCGLevel(gLevel);
      }
 
      public static void SetLevel(int level){
@@ -38,7 +41,7 @@ public class LevelGenerator : MonoBehaviour
      }
 
     // Call this function to generate the level
-    public static void GenerateLevel(int level)
+    public static void GeneratePCGLevel(int level)
     {
         Vector2Int startPoint = new Vector2Int(14, 1);
         Vector2Int endPoint = new Vector2Int(1, 14);
@@ -47,7 +50,7 @@ public class LevelGenerator : MonoBehaviour
         grid = new Node[n, m];
 
         // Create the grid
-        Debug.Log("GenerateLevel() grid of " + n + "x" + m + " nodes");
+        Debug.Log("GeneratePCGLevel() grid of " + n + "x" + m + " nodes");
         for (int x = 0; x < n; x++)
         {
             for (int z = 0; z < m; z++)
@@ -56,10 +59,10 @@ public class LevelGenerator : MonoBehaviour
                     startX + x*tileWidth, 
                     0,
                     startZ - z*tileHeight); // Adjust for your grid spacing
-                //Debug.Log("GenerateLevel() (x,z)=(" + x +"," + z + "), position = " + position);
+                //Debug.Log("GeneratePCGLevel() (x,z)=(" + x +"," + z + "), position = " + position);
                 GameObject node = Instantiate(gNodePrefab, position, Quaternion.identity, gTransform);
                 grid[x,z] = node.GetComponent<Node>();
-                //Debug.Log("GenerateLevel() grid[" + x + "," + z + "] = " + grid[x,z]);
+                //Debug.Log("GeneratePCGLevel() grid[" + x + "," + z + "] = " + grid[x,z]);
             }
         }
 
