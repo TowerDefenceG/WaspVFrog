@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0031604734, g: 0.023208626, b: 0.0051155, a: 1}
+  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10259,7 +10259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21607,7 +21607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6713292447680504064, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22185,7 +22185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259280016806362358, guid: d56aa821a15a7465ab15bf05ecbd5c24, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2995075986680277628, guid: d56aa821a15a7465ab15bf05ecbd5c24, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28600,7 +28600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713683994743310616, guid: 606f2e48a4e331e449038c13576f7324, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677342334314519009, guid: 606f2e48a4e331e449038c13576f7324, type: 3}
       propertyPath: range
@@ -34070,7 +34070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695526697735541651, guid: 4f51d406db502fa4492c2a023266b542, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36976,7 +36976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713683994743310616, guid: fc5f7511065ef7e429b8a710adc012ba, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1677342334314519009, guid: fc5f7511065ef7e429b8a710adc012ba, type: 3}
       propertyPath: range
@@ -37607,7 +37607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2995075986680277628, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39231,7 +39231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6713292447680504064, guid: 5260aad131ccf9543951aab92a071cc2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45001,8 +45001,6 @@ MonoBehaviour:
     rate: 0.5
   spawnPoint: {fileID: 1026838754}
   timeBetweenWaves: 3.5
-  waveCountdownText: {fileID: 756280923}
-  waveNumberText: {fileID: 785683230}
 --- !u!4 &1937667729
 Transform:
   m_ObjectHideFlags: 0

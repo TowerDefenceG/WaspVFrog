@@ -137,11 +137,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 9
   speed: 0
-  health: 200
+  health: 300
   worth: 25
   impactParticle: {fileID: 8358091209416692786}
   deathParticle: {fileID: 5292362184556467543}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: b1aa7cb7ab23d494cae795892e64ba94, type: 3}
 --- !u!1 &3946149085039977543
 GameObject:
   m_ObjectHideFlags: 0
@@ -10019,6 +10019,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 7fcbe5c41e16a7245a4a4ba70fd48db0, type: 2}
+    - target: {fileID: -3887185075125053422, guid: 186b8c9d4377d66429a600f0016c5518, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e310d4f1185d724c971c9e743a8faae, type: 2}
     - target: {fileID: 919132149155446097, guid: 186b8c9d4377d66429a600f0016c5518, type: 3}
       propertyPath: m_Name
       value: stylised wasp joined normalised
