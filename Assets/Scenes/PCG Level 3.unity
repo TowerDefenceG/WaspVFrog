@@ -14227,22 +14227,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     prefab: {fileID: 6713292447680504064, guid: d36fedc2777e6a0449d0a7a9f924aad5, type: 3}
+    frogName: 
+    upgradeName: 
+    upgradeName2: 
     cost: 100
     sellCost: 50
+    sellCost2: 0
+    sellCost3: 0
     upgradedPrefab: {fileID: 6713292447680504064, guid: 5260aad131ccf9543951aab92a071cc2, type: 3}
+    upgradedPrefab2: {fileID: 0}
     upgradeCost: 100
+    upgradeCost2: 0
   missileTurret:
     prefab: {fileID: 8695526697735541651, guid: 051a72816cf88ca4e94f8fdda7b6fdf0, type: 3}
+    frogName: 
+    upgradeName: 
+    upgradeName2: 
     cost: 250
     sellCost: 125
+    sellCost2: 0
+    sellCost3: 0
     upgradedPrefab: {fileID: 8695526697735541651, guid: 4f51d406db502fa4492c2a023266b542, type: 3}
+    upgradedPrefab2: {fileID: 0}
     upgradeCost: 150
+    upgradeCost2: 0
   laserBeamer:
     prefab: {fileID: 713683994743310616, guid: 606f2e48a4e331e449038c13576f7324, type: 3}
+    frogName: 
+    upgradeName: 
+    upgradeName2: 
     cost: 350
     sellCost: 175
+    sellCost2: 0
+    sellCost3: 0
     upgradedPrefab: {fileID: 713683994743310616, guid: fc5f7511065ef7e429b8a710adc012ba, type: 3}
+    upgradedPrefab2: {fileID: 0}
     upgradeCost: 150
+    upgradeCost2: 0
 --- !u!114 &829810612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14886,16 +14907,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 2259280016806362358, guid: d56aa821a15a7465ab15bf05ecbd5c24, type: 3}
-    count: 5
-    rate: 1
-  - enemy: {fileID: 2259280016806362358, guid: d56aa821a15a7465ab15bf05ecbd5c24, type: 3}
-    count: 10
-    rate: 2
-  - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
-    count: 5
+    count: 6
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
-    count: 10
+    count: 3
+    rate: 1
+  - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
+    count: 5
+    rate: 1
+  - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
+    count: 5
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: ffa85274302194349b8625470066fd1d, type: 3}
     count: 1
@@ -33918,8 +33939,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 558062073}
   upgradeCost: {fileID: 1555639747}
+  upgradeCost2: {fileID: 0}
   sellCost: {fileID: 359403053}
+  sellCost2: {fileID: 0}
+  sellCost3: {fileID: 0}
+  frogName: {fileID: 0}
+  upgradeName: {fileID: 0}
+  upgradeName2: {fileID: 0}
   rangeIndicator: {fileID: 969663853}
+  rangeIndicator2: {fileID: 0}
+  upgradeBtn: {fileID: 0}
+  upgradeBtn2: {fileID: 0}
 --- !u!4 &2107855345
 Transform:
   m_ObjectHideFlags: 0
