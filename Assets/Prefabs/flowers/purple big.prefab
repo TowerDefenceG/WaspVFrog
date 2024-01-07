@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.77781445, g: 0.5411765, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a4c5a5fd6e04a342922d43d40532690, type: 3}
       propertyPath: m_TagString
-      value: barriers
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8442510506162454399, guid: 2a4c5a5fd6e04a342922d43d40532690, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: white small
       objectReference: {fileID: 0}
+    - target: {fileID: 8001515483751314196, guid: de9e8040625fc1a4ba0d9bc47c2d27aa, type: 3}
+      propertyPath: m_TagString
+      value: barriers
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1389177454102573465, guid: de9e8040625fc1a4ba0d9bc47c2d27aa, type: 3}
@@ -90,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 7059534086547261619, guid: c589313e9b36d8e47a719d02f50ede98, type: 3}
       propertyPath: m_Name
       value: blue big
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059534086547261619, guid: c589313e9b36d8e47a719d02f50ede98, type: 3}
+      propertyPath: m_TagString
+      value: barriers
       objectReference: {fileID: 0}
     - target: {fileID: 7688577456031732233, guid: c589313e9b36d8e47a719d02f50ede98, type: 3}
       propertyPath: m_LocalScale.x
@@ -216,6 +224,10 @@ PrefabInstance:
     - target: {fileID: 1778647757406909503, guid: 2507e6cff155a6a4083a0eeff1ec5ffd, type: 3}
       propertyPath: m_Name
       value: purple small
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778647757406909503, guid: 2507e6cff155a6a4083a0eeff1ec5ffd, type: 3}
+      propertyPath: m_TagString
+      value: barriers
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
