@@ -27,7 +27,7 @@ public class OptionMenu : MonoBehaviour
     }
     public void Menu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(9);
         // Time.timeScale = 1f;
     }
 
