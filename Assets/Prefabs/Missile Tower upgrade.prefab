@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3921304804051824331}
   - component: {fileID: -7716492249499798803}
   m_Layer: 0
-  m_Name: Missile Tower
+  m_Name: Missile Tower upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   range: 27
-  attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
+  attackPrefab: {fileID: 614427528341641052, guid: 95541b29348eaf14abeb45c030e65eb3, type: 3}
   attackSpeed: 0.5
   useLaser: 0
   damageOverTime: 30
@@ -157,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 4586956924907295559, guid: 16410c533ff2fb7458d1432a68a92c03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 40a0f509a82df4546805f3d5d509fa5d, type: 2}
+      objectReference: {fileID: 2100000, guid: d43632df96293f44285510754acb29a7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
