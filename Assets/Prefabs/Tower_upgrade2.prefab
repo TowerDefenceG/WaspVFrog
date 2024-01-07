@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6053855507621178100}
   - component: {fileID: 8052008797407349154}
   m_Layer: 0
-  m_Name: Tower_upgrade
+  m_Name: Tower_upgrade2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
-  range: 15
+  range: 22
   attackPrefab: {fileID: 5300432638263304809, guid: e96cacaac67504f4792d1468bd25b3c1, type: 3}
   attackSpeed: 3
   useLaser: 0
@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 4586956924907295559, guid: 16410c533ff2fb7458d1432a68a92c03, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a8d1d8781a347ad40aa861860bfedacf, type: 2}
+      objectReference: {fileID: 2100000, guid: 15b2a0caf9ef4d443a584343304ea786, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

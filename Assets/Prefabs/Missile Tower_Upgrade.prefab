@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6306413554505916050}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 5.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.39, z: 3.07}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3921304804051824331}
   - component: {fileID: 2059216198535942478}
   m_Layer: 0
-  m_Name: Missile Tower_Upgrade 1
+  m_Name: Missile Tower_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   range: 30
-  attackPrefab: {fileID: 614427528341641052, guid: 45a348b2b960e6f45a42dc7b20efa595, type: 3}
-  attackSpeed: 1
+  attackPrefab: {fileID: 614427528341641052, guid: 95541b29348eaf14abeb45c030e65eb3, type: 3}
+  attackSpeed: 0.5
   useLaser: 0
   damageOverTime: 30
   slowPct: 0.5
