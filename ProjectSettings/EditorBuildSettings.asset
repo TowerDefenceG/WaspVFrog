@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PCG Level 3.unity
     guid: ef94adb2d1ff34ac88b84855e4f84c90
+  - enabled: 1
+    path: Assets/Scenes/Level Select Map.unity
+    guid: ab11b79ddd6904f4a82dc7b94dddcec5
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
