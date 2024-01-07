@@ -221,7 +221,7 @@ public void UpgradeTurret2 ()
             GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab2, GetBuildPosition(), Quaternion.identity);
             turret = _turret;
             upgrade += 1;
-            Debug.Log("turret upgraded!");
+            Debug.Log("turret2 upgraded!");
             Debug.Log(upgrade);
         }
 }
