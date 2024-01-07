@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012931, g: 0.07012931, b: 0.07012931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11877,7 +11877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_text
-      value: "Tongue Frog \xA3200"
+      value: "Tongue Frog \xA3300"
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize
@@ -28938,7 +28938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_text
-      value: "Frog \xA3200"
+      value: "Frog \xA3100"
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize

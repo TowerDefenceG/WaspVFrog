@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012931, g: 0.07012931, b: 0.07012931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5943,6 +5943,11 @@ Transform:
   - {fileID: 1015495983}
   m_Father: {fileID: 902028945}
   m_LocalEulerAnglesHint: {x: 0.127, y: 85.846, z: -0.032}
+--- !u!4 &121937733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1261868409176018609, guid: 04c5a98f026fd478184c953fd0b21e17, type: 3}
+  m_PrefabInstance: {fileID: 567974633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &122761772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6107,11 +6112,6 @@ PrefabInstance:
       addedObject: {fileID: 2549827}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494f6d43e170e9145bc7865d243ee00b, type: 3}
---- !u!4 &121937733 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1261868409176018609, guid: 04c5a98f026fd478184c953fd0b21e17, type: 3}
-  m_PrefabInstance: {fileID: 567974633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &131411983
 GameObject:
   m_ObjectHideFlags: 0
@@ -13392,7 +13392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_text
-      value: "Tongue Frog \xA3200"
+      value: "Tongue Frog \xA3300"
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize
@@ -32613,7 +32613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_text
-      value: "Frog \xA3200"
+      value: "Frog \xA3100\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6190078768616505389, guid: 4a2b66bd44029aa489fbcb232df6ef6a, type: 3}
       propertyPath: m_fontSize
