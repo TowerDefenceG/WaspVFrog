@@ -73,12 +73,15 @@ public class ModeSelector : MonoBehaviour
         switch(difficulty){
             case 1:
                 easyButton?.Select();
+                Debug.Log("easyButton selected"+easyButton);
                 break;
             case 2:
                 hardButton?.Select();
+                Debug.Log("hardButton selected"+hardButton);
                 break;
             case 3:
                 insaneButton?.Select();
+                Debug.Log("insaneButton selected"+insaneButton);
                 break;
         }
     }
