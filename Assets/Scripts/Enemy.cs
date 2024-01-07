@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] ParticleSystem impactParticle;
     [SerializeField] ParticleSystem deathParticle;
+    [SerializeField] GameObject deathParticlesPrefab;
     [SerializeField] private AudioClip deathSound;
 
     void Start(){
@@ -43,33 +44,45 @@ public class Enemy : MonoBehaviour
     
     void Die(){
         AudioManager.Instance.PlaySound(deathSound);
-        PlayerStats.Money += worth;
+        
         // Debug.Log("animation");
-        StartCoroutine(PlayDeathParticleAndDestroy());
-        // Destroy(gameObject);
-        // WaveSpawner.EnemiesAlive--; 
-    }
-
-    IEnumerator PlayDeathParticleAndDestroy(){
-        // Delay for a short period before playing the impact particle
-        deathParticle.Play();
-        // yield return new WaitForSeconds(0.1f);
-        
-        Transform waspTransform = transform.Find("wasp"); // Replace "Wasp" with the actual name of the child object
-        if (waspTransform != null){
-            waspTransform.gameObject.SetActive(false);
-        }
-        // yield return new WaitForSeconds(0.1f);
-        
-        // Additional delay if needed
-        yield return new WaitForSeconds(0.1f);
-
-        // Destroy the enemy after playing the particle
+        // StartCoroutine(PlayDeathParticleAndDestroy());
+        // deathParticle.Play();
         Destroy(gameObject);
-        
-        // Decrement the count of enemies alive
+        PlayerStats.Money += worth;
         WaveSpawner.EnemiesAlive--; 
     }
+
+    void OnDestroy(){
+        if (deathParticlesPrefab != null){
+            // Instantiate the DeathParticles object at the same position as the original object
+            GameObject deathParticles = Instantiate(deathParticlesPrefab, transform.position, transform.rotation);
+
+            // Start the particle system
+            deathParticles.GetComponent<ParticleSystem>().Play();
+        }
+    }
+
+    // IEnumerator PlayDeathParticleAndDestroy(){
+    //     // Delay for a short period before playing the impact particle
+        
+    //     // yield return new WaitForSeconds(0.1f);
+        
+    //     Transform waspTransform = transform.Find("wasp"); // Replace "Wasp" with the actual name of the child object
+    //     if (waspTransform != null){
+    //         waspTransform.gameObject.SetActive(false);
+    //     }
+    //     // yield return new WaitForSeconds(0.1f);
+        
+    //     // Additional delay if needed
+    //     yield return new WaitForSeconds(0.1f);
+
+    //     // Destroy the enemy after playing the particle
+    //     Destroy(gameObject);
+        
+    //     // Decrement the count of enemies alive
+    //     WaveSpawner.EnemiesAlive--; 
+    // }
 
     
 }
