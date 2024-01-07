@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012931, g: 0.07012931, b: 0.07012931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14822,7 +14822,8 @@ MonoBehaviour:
     count: 0
     rate: 0
   spawnPoint: {fileID: 1420309294}
-  timeBetweenWaves: 3.5
+  timeBetweenWaves: 3
+  waveNumberText: {fileID: 912455963}
 --- !u!4 &882155909
 Transform:
   m_ObjectHideFlags: 0

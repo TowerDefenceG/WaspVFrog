@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012931, g: 0.07012931, b: 0.07012931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3511,20 +3511,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tower Defence game
-
-    - use frogs to defend the frog village from the
-    wasps!
-
-
-    different frogs have different abilities
-
-
-    look out for the
-    strong wasps!
-
-
-    etc..'
+  m_text: "Welcome to our tower defence game! Protect the frog village from incoming
+    waves of wasps by strategically purchasing and placing three frog types along
+    the path. Each frog features unique abilities and pricing so choose wisely!\n\n-
+    In the level selector, choose the game mode that best fits your experience level
+    and skills: easy, hard or insane\n- With your mouse, select a frog type from
+    the shop on the right. Click a tile on the board to place your chosen frog. \n-Need
+    more firepower? Upgrade your frogs by clicking their tile on the map and selecting
+    'upgrade.' \n-Frogs can be sold to earn back some money by clicking on them and
+    selecting \u2018sell\u2019.\n-Click \u2018>>\u2019 in bottom right to speed up
+    time \nPress escape to pause the game \n \nMaster these actions to strategically
+    defend the frog village! \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
