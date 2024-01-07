@@ -16,6 +16,7 @@ public class GameOver : MonoBehaviour
 
     }
     public void Retry(){
+        GameManager.gameIsOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

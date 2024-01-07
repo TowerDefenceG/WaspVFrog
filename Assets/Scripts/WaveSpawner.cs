@@ -8,21 +8,21 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
+
     public Wave[] waves; 
-
     public Transform spawnPoint;
-
     public float timeBetweenWaves = 5f; //cooldown
-    private float countdown =2f; //takes 2 seconds to spawn first wave
-
     // public TextMeshProUGUI waveCountdownText;
     public TextMeshProUGUI waveNumberText;
 
+    private float countdown =2f; //takes 2 seconds to spawn first wave
     private int waveIndex = 1; 
 
     void Start(){
         Debug.Log("WaveSpawner.Start() spawnPoint="+spawnPoint+"-------------------------");
         PlayerStats.Rounds = 0;
+        GameManager.gameIsOver = false;
+        EnemiesAlive = 0;
     }
 
     private void Update() {
