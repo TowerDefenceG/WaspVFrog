@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06994623, g: 0.06994623, b: 0.06994623, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012931, g: 0.07012931, b: 0.07012931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1163,6 +1163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effectsslider: {fileID: 135795828}
+  effectsOn: {fileID: 0}
+  effectsOff: {fileID: 0}
+  effectsOnImg: {fileID: 0}
+  effectsOffImg: {fileID: 0}
 --- !u!1001 &150739031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11306,7 +11310,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770043213}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d08ec28f27ce9fc46805654372b4d716, type: 3}
