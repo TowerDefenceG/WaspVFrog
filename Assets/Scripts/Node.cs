@@ -30,7 +30,8 @@ public class Node : MonoBehaviour{
     [SerializeField] ParticleSystem placeParticle;
     
 
-    // public WarningPopup warningPopup;
+    public GameObject warningPopupPrefab;
+    private GameObject warningPopupInstance;
 	
     private void Start() {
         rend = GetComponent<Renderer>();
@@ -79,6 +80,7 @@ public class Node : MonoBehaviour{
         }
         if (HasBarriers()){ //barriers built on environment prefabs
             Debug.Log("Can't build there! Node has barriers.");
+            ShowWarningPopup();
             return;
         }
 		if (!buildManager.CanBuild){
@@ -196,6 +198,24 @@ public void UpgradeTurret ()
 
     private void OnMouseExit() {
         rend.material.color = startColor;
+    }
+
+    private void ShowWarningPopup()
+    {
+        // Instantiate warning popup if it's not instantiated yet
+        if (warningPopupInstance == null)
+        {
+            warningPopupInstance = Instantiate(warningPopupPrefab, GetBuildPosition(), Quaternion.identity);
+            warningPopupInstance.SetActive(true);
+            StartCoroutine(DestroyWarningPopupAfterDelay(2.0f));
+        }
+    }
+
+    IEnumerator DestroyWarningPopupAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(warningPopupInstance);
+        warningPopupInstance = null;
     }
 
 }
