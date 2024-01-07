@@ -51,6 +51,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   range: 30
+  upgradedRange: 30
   attackPrefab: {fileID: 0}
   attackSpeed: 2
   useLaser: 1

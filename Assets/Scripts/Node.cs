@@ -111,6 +111,7 @@ public class Node : MonoBehaviour{
 		Debug.Log("Node.SellTurret()");
         if (upgrade == 0){
 		PlayerStats.Money += turretBlueprint.GetSellAmount();
+        upgrade = 0; // resets upgrade state of node for next frog placed
         Destroy(turret);
         turret = null;
         buildManager.DeselectNode();
@@ -118,6 +119,7 @@ public class Node : MonoBehaviour{
         if (upgrade == 1){
         Debug.Log("Node.SellUpgradeTurret()");
 		PlayerStats.Money += turretBlueprint.GetUpgradeSellAmount();
+        upgrade = 0;
         Destroy(turret);
         turret = null;
         buildManager.DeselectNode();
@@ -125,6 +127,7 @@ public class Node : MonoBehaviour{
         if (upgrade == 2){
         Debug.Log("Node.SellUpgradeTurret()");
 		PlayerStats.Money += turretBlueprint.GetUpgrade2SellAmount();
+        upgrade = 0;
         Destroy(turret);
         turret = null;
         buildManager.DeselectNode();
@@ -193,11 +196,11 @@ public void UpgradeTurret ()
         //build a new turret
         if (upgrade == 0){
             Destroy(turret);
-        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
-        turret = _turret;
-        upgrade += 1;
-        Debug.Log("turret upgraded!");
-        Debug.Log(upgrade);
+            GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            upgrade += 1;
+            Debug.Log("turret upgraded!");
+            Debug.Log(upgrade);
         }
 }
 public void UpgradeTurret2 ()
@@ -215,13 +218,14 @@ public void UpgradeTurret2 ()
         //build a new turret
         if (upgrade == 1){
             Destroy(turret);
-        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab2, GetBuildPosition(), Quaternion.identity);
-        turret = _turret;
-        upgrade += 1;
-        Debug.Log("turret upgraded!");
-        Debug.Log(upgrade);
+            GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab2, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            upgrade += 1;
+            Debug.Log("turret upgraded!");
+            Debug.Log(upgrade);
         }
 }
+
     void OnMouseEnter (){
         // called once every time mouse enters collider of object
         if (EventSystem.current.IsPointerOverGameObject()){ // stop accidental clickthrough if UI button is over a tile
