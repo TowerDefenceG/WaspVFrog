@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a4c5a5fd6e04a342922d43d40532690, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: barriers
       objectReference: {fileID: 0}
     - target: {fileID: 8442510506162454399, guid: 2a4c5a5fd6e04a342922d43d40532690, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -212,4 +212,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -4391918325660058233, guid: b5a80b3e2a089b841b155d7c7f461e7c, type: 3}

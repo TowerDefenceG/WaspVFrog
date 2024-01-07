@@ -254,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1266555084220285564, guid: 76e0ed469adaf9f4983a0e2966157635, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: barriers
       objectReference: {fileID: 0}
     - target: {fileID: 1584950108343764834, guid: 76e0ed469adaf9f4983a0e2966157635, type: 3}
       propertyPath: m_LocalPosition.x

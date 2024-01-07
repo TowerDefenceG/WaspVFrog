@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: be58b1fe6fc967e4a91a296e93484c89, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: barriers
       objectReference: {fileID: 0}
     - target: {fileID: 5233112405309087440, guid: be58b1fe6fc967e4a91a296e93484c89, type: 3}
       propertyPath: m_Name
@@ -219,7 +219,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -4391918325660058233, guid: b5a80b3e2a089b841b155d7c7f461e7c, type: 3}
 --- !u!4 &7824989797085348954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be58b1fe6fc967e4a91a296e93484c89, type: 3}

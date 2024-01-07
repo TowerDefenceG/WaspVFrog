@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9189364600100018052, guid: 545e2926e5bfaec44be069f8907e9aee, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: barriers
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
