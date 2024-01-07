@@ -15,17 +15,22 @@ public class LevelSelector : MonoBehaviour
     {
         LevelGenerator.SetLevel(1);
         SceneManager.LoadScene(6);
+        Time.timeScale=1f;
+
     }
     public void LoadLevel2()
     {
         LevelGenerator.SetLevel(2);
         SceneManager.LoadScene(7);
+        Time.timeScale=1f;
     }
 
     public void LoadLevel3()
     {
         LevelGenerator.SetLevel(3);
         SceneManager.LoadScene(8);
+        Time.timeScale=1f;
+
     }
 
 }
