@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     [Header("General")]
     //range of the tower
     public float range = 15f;
+    public float upgradedRange = 22f;
 
     [Header("Use Bullets (default)")]
     public GameObject attackPrefab;

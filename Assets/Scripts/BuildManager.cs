@@ -32,6 +32,7 @@ public class BuildManager : MonoBehaviour
 	public void selectNode(Node node){
 	    if (selectedNode == node){
             Debug.Log("deselecting node");
+            nodeUI.ShowRangeIndicator();
             DeselectNode();
             return;
         }

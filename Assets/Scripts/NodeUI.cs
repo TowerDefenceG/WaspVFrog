@@ -32,6 +32,7 @@ public class NodeUI : MonoBehaviour
         sellCost2.text = "$" + target.turretBlueprint.sellCost2;
         sellCost3.text = "$" + target.turretBlueprint.sellCost3;
         ShowRangeIndicator();
+        HideRangeIndicator2();
 
         if (target.upgrade == 0)
 		{
@@ -79,16 +80,18 @@ public class NodeUI : MonoBehaviour
     public void Hide()
     {
         ui.SetActive(false);
-        rangeIndicator?.gameObject.SetActive(false);
+        // rangeIndicator?.gameObject.SetActive(false);
         HideRangeIndicator();
+        HideRangeIndicator2();
     }
 
-    void ShowRangeIndicator()
+    public void ShowRangeIndicator()
     {
         if (target != null && rangeIndicator != null)
         {
         // Accessing the Tower component to get the range
         float towerRange = target.turretBlueprint.prefab.GetComponent<Tower>().range;
+        Debug.Log("Range:");
         Debug.Log(towerRange);
 
         Vector3 position = target.GetBuildPosition();
@@ -97,19 +100,19 @@ public class NodeUI : MonoBehaviour
         rangeIndicator.position = position;
 
         // Scale the rangeIndicator based on the tower's range
-        float indicatorScale = (towerRange) / rangeIndicator.localScale.x; // Multiply by 2 to get diameter
+        float indicatorScale = (towerRange) / 1; // Multiply by 2 to get diameter
         rangeIndicator.localScale = new Vector3(indicatorScale, 0.5f, indicatorScale);
-
         rangeIndicator.gameObject.SetActive(true);
         }
     }
 
-    void ShowRangeIndicator2()
+    public void ShowRangeIndicator2()
     {
         if (target != null && rangeIndicator2 != null)
         {
         // Accessing the Tower component to get the range
-        float towerRange2 = target.turretBlueprint.upgradedPrefab.GetComponent<Tower>().range;
+        float towerRange2 = target.turretBlueprint.prefab.GetComponent<Tower>().upgradedRange;
+        Debug.Log("upgraded range");
         Debug.Log(towerRange2);
 
         Vector3 position = target.GetBuildPosition();
@@ -118,7 +121,7 @@ public class NodeUI : MonoBehaviour
         rangeIndicator2.position = position;
 
         // Scale the rangeIndicator based on the tower's range
-        float indicatorScale2 = (towerRange2) / rangeIndicator2.localScale.x; // Multiply by 2 to get diameter
+        float indicatorScale2 = (towerRange2) / 1; // Multiply by 2 to get diameter
         rangeIndicator2.localScale = new Vector3(indicatorScale2, 0.5f, indicatorScale2);
 
         rangeIndicator2.gameObject.SetActive(true);
@@ -130,6 +133,13 @@ public class NodeUI : MonoBehaviour
         if (rangeIndicator != null)
         {
             rangeIndicator?.gameObject.SetActive(false);
+        }
+    }
+        void HideRangeIndicator2()
+    {
+        if (rangeIndicator2 != null)
+        {
+            rangeIndicator2?.gameObject.SetActive(false);
         }
     }
 

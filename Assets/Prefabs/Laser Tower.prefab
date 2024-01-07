@@ -81,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
-  range: 25
+  range: 20
+  upgradedRange: 30
   attackPrefab: {fileID: 0}
   attackSpeed: 0
   useLaser: 1
