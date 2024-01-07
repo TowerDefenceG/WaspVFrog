@@ -5024,6 +5024,7 @@ MonoBehaviour:
   environmentLevel: 0.8
   uiAnimator: {fileID: 0}
   placeParticle: {fileID: 7441829291641083972}
+  warningPopupPrefab: {fileID: 8059528398792437493, guid: 04c5a98f026fd478184c953fd0b21e17, type: 3}
 --- !u!114 &8897511524459815958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5031,9 +5032,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8205128958927049124}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22dff7dcc3fa5ce4dbad06e1f76f22ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPanel: {fileID: 0}
+  popupPanel: {fileID: 8059528398792437493, guid: 04c5a98f026fd478184c953fd0b21e17, type: 3}
