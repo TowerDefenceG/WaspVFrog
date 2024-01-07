@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.041442942, g: 0.041442942, b: 0.041442942, a: 1}
+  m_IndirectSpecularColor: {r: 0.04156518, g: 0.04156518, b: 0.04156518, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13523,6 +13523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2040048849}
     m_Modifications:
+    - target: {fileID: 5443217996720745930, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
       propertyPath: m_Name
       value: Rock_04 (2)
@@ -41453,7 +41457,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -4550125092169740112, guid: ad3119cbd6dce024e8460ef32dec49df, type: 3}
 --- !u!1001 &1463810801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45374,6 +45378,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: barriers
       objectReference: {fileID: 0}
+    - target: {fileID: 6653343314584771999, guid: eebb56c82efbd8d4bb0eb6bd925a0e9d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46783,6 +46791,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2040048849}
     m_Modifications:
+    - target: {fileID: 1028483445463271210, guid: cebfacc247a640945a2c30b442202fca, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5202732821079344928, guid: cebfacc247a640945a2c30b442202fca, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -47815,6 +47827,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2040048849}
     m_Modifications:
+    - target: {fileID: 7007591236292485129, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (5)
@@ -49998,7 +50014,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 7855247728046881105, guid: 638dc165572d2a84081d13ce1afb4d52, type: 3}
 --- !u!1 &2003590716
 GameObject:
   m_ObjectHideFlags: 0
