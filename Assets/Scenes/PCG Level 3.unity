@@ -28486,16 +28486,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 2259280016806362358, guid: d56aa821a15a7465ab15bf05ecbd5c24, type: 3}
-    count: 6
+    count: 4
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
     count: 3
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
-    count: 5
+    count: 3
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: 831e57b339caa804ebde2d6e8cbd1a58, type: 3}
-    count: 5
+    count: 3
     rate: 1
   - enemy: {fileID: 2259280016806362358, guid: ffa85274302194349b8625470066fd1d, type: 3}
     count: 1
