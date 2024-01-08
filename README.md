@@ -25,7 +25,7 @@ Protect the forest from incoming waves of wasps by strategically placing frogs. 
 
 - Click ‘>>’  to speed up time
 
-- Press escape to pause the game 
+- Press 'P' to pause the game
 
 <b>Master these actions to strategically defend the frog village! </b>
 
