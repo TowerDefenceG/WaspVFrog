@@ -8,9 +8,9 @@ week 11 playtesting: https://towerdefenceg.github.io/WaspVFrogBuilds/v0.3.1/inde
 
 December 26, 2023: https://towerdefenceg.github.io/WaspVFrogBuilds/v0.4/index.html 
 
-January 7, 2024: https://towerdefenceg.github.io/WaspVFrogBuilds/v.0.5/index.html
+January 7, 2024: https://towerdefenceg.github.io/WaspVFrogBuilds/v.0.5/index.html 
 
-Final: 
+Final: https://towerdefenceg.github.io/WaspVFrogBuilds/final/index.html
 
 
 <b>Welcome to our tower defence game!</b>
