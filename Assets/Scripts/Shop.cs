@@ -16,7 +16,7 @@ public class Shop : MonoBehaviour
         // called from UI element
         // communicates with buildManager and currency amount
 
-        Debug.Log("Standard Turret selected");
+        Debug.Log($"Standard Turret selected. cost={standardTurret.cost}");
         buildManager.SelectTurretToBuild(standardTurret);
     }
 
@@ -24,7 +24,7 @@ public class Shop : MonoBehaviour
         // called from UI element
         // communicates with buildManager and currency amount
 
-        Debug.Log("missile Turret selected");
+        Debug.Log($"missile Turret selected. cost={missileTurret.cost}");
                 buildManager.SelectTurretToBuild(missileTurret);
 
     }
@@ -33,7 +33,7 @@ public class Shop : MonoBehaviour
         // called from UI element
         // communicates with buildManager and currency amount
 
-        Debug.Log("Laser Turret selected");
+        Debug.Log($"Laser Turret selected. cost={laserBeamer.cost}");
                 buildManager.SelectTurretToBuild(laserBeamer);
 
     }
