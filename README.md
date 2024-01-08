@@ -39,4 +39,8 @@ Protect the forest from incoming waves of wasps by strategically placing frogs. 
 - llight cookie - https://www.flickr.com/photos/sightrays/3522204218/in/photostream/
 - frog icon - sprite - https://www.flaticon.com/free-icon/animal_13757121?term=frog&page=1&position=15&origin=tag&related_id=13757121
 - Brackeys tower defence tutorial - tutorial - https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
+- level music - audio - https://pixabay.com/music/video-games-gnork-party-improved-171719/
+- menu music - audio - https://pixabay.com/music/video-games-little-slimex27s-adventure-151007/
+- frog placed - https://orangefreesounds.com/frog-sound-ribbit/
+- wasp death - audio - edited original audio via ClipChamp original - https://pixabay.com/sound-effects/wasp-wings-2-101131/
 
