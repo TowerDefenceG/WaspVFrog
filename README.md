@@ -28,6 +28,13 @@ Protect the forest from incoming waves of wasps by strategically placing frogs. 
 - Press 'P' to pause the game
 
 <b>Master these actions to strategically defend the frog village! </b>
+## Screenshots
+![1](https://github.com/TowerDefenceG/WaspVFrog/assets/95420080/c72c984f-20ba-422d-b7fe-a6770012a9ac)
+![2](https://github.com/TowerDefenceG/WaspVFrog/assets/95420080/e1d40ee8-36fd-40be-b7fa-e2aeab706b5f)
+![3](https://github.com/TowerDefenceG/WaspVFrog/assets/95420080/ab6007e5-927b-4390-ae5b-804ba5a921ae)
+![4](https://github.com/TowerDefenceG/WaspVFrog/assets/95420080/7c5f83a3-1c07-4495-8c10-b4249bcffa4b)
+![5](https://github.com/TowerDefenceG/WaspVFrog/assets/95420080/629124fc-6bda-48f8-b176-474ed2fc0c12)
+
 
 ## assets/ resources used:
 - wasp (and animation), frog (and animation), glowing flower, crown - 3d models - Olivia
